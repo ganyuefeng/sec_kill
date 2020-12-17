@@ -1,0 +1,1006 @@
+2020/12/17 09:28:47.435 [D] [init.go:298]  initredis start
+2020/12/17 09:28:47.456 [E] [init.go:298]  ping redis failed  DENIED Redis is running in protected mode because protected mode is enabled, no bind address was specified, no authentication password is requested to clients. In this mode connections are only accepted from the loopback interface. If you want to connect from external computers to Redis you may adopt one of the following solutions: 1) Just disable protected mode sending the command 'CONFIG SET protected-mode no' from the loopback interface by connecting to Redis from the same host the server is running, however MAKE SURE Redis is not publicly accessible from internet if you do so. Use CONFIG REWRITE to make this change permanent. 2) Alternatively you can just disable the protected mode by editing the Redis configuration file, and setting the protected mode option to 'no', and then restarting the server. 3) If you started the server manually just for testing, restart it with the '--protected-mode no' option. 4) Setup a bind address or an authentication password. NOTE: You only need to do one of the above things in order for the server to start accepting connections from the outside.
+2020/12/17 09:28:47.456 [E] [main.go:17]  initRedis failed err is DENIED Redis is running in protected mode because protected mode is enabled, no bind address was specified, no authentication password is requested to clients. In this mode connections are only accepted from the loopback interface. If you want to connect from external computers to Redis you may adopt one of the following solutions: 1) Just disable protected mode sending the command 'CONFIG SET protected-mode no' from the loopback interface by connecting to Redis from the same host the server is running, however MAKE SURE Redis is not publicly accessible from internet if you do so. Use CONFIG REWRITE to make this change permanent. 2) Alternatively you can just disable the protected mode by editing the Redis configuration file, and setting the protected mode option to 'no', and then restarting the server. 3) If you started the server manually just for testing, restart it with the '--protected-mode no' option. 4) Setup a bind address or an authentication password. NOTE: You only need to do one of the above things in order for the server to start accepting connections from the outside.
+2020/12/17 09:30:56.786 [D] [init.go:298]  initredis start
+2020/12/17 09:30:56.819 [D] [init.go:298]  initRedis success!!
+2020/12/17 09:30:56.820 [D] [init.go:305]  initEtcd success
+2020/12/17 09:30:56.820 [D] [init.go:312]  key is /ganyuefeng/backend/secskill/product
+2020/12/17 09:30:56.855 [D] [init.go:312]  key is /ganyuefeng/backend/secskill/product
+2020/12/17 09:30:56.855 [D] [init.go:312]  key[0] valud[key:"/ganyuefeng/backend/secskill/product" create_revision:34 mod_revision:36 version:3 value:"[{\"ProductId\":1029,\"StartTime\":1505008800,\"EndTime\":1505012400,\"Status\":0,\"Total\":1000,\"Left\":1000,\"OnePersonBuyLimit\":0,\"BuyRate\":0,\"SoldMaxLimit\":0},{\"ProductId\":1027,\"StartTime\":1505008800,\"EndTime\":1505012400,\"Status\":0,\"Total\":2000,\"Left\":1000,\"OnePersonBuyLimit\":0,\"BuyRate\":0,\"SoldMaxLimit\":0},{\"ProductId\":1,\"StartTime\":1608186520,\"EndTime\":1608199320,\"Status\":0,\"Total\":100,\"Left\":0,\"OnePersonBuyLimit\":3,\"BuyRate\":10,\"SoldMaxLimit\":50},{\"ProductId\":2,\"StartTime\":1608266320,\"EndTime\":1608599320,\"Status\":0,\"Total\":100,\"Left\":0,\"OnePersonBuyLimit\":3,\"BuyRate\":3,\"SoldMaxLimit\":3}]" ]
+2020/12/17 09:30:56.855 [D] [init.go:312]  ganyuefeng info conf is [[{1029 1505008800 1505012400 0 1000 1000} {1027 1505008800 1505012400 0 2000 1000} {1 1608186520 1608199320 0 100 0} {2 1608266320 1608599320 0 100 0}]]
+2020/12/17 09:30:56.855 [D] [init.go:312]  loadSecConf success!
+2020/12/17 09:30:56.856 [D] [init.go:127]  initredis start
+2020/12/17 09:30:56.856 [D] [init.go:127]  initRedis success!!
+2020/12/17 09:30:56.857 [D] [init.go:318]  init service succ, config:&{{192.168.199.99:6379 64 0 30} { 0 0 0} { 0 0 0} {localhost:2379 5 /ganyuefeng/backend/secskill /ganyuefeng/backend/secskill/product} ./logs/sec.log debug map[1:0xc00003ef90 2:0xc00003efc0 1027:0xc00003ef60 1029:0xc00003ef30] {{0 0} 0 0 0 0} tyP87zZKzITuzaUjhmbqhNIDnyg6f2KP [localhost baidu.com/seckill] map[] map[] {50 1 500 10} 0xc000213110 <nil> <nil> <nil> {{0 0} 0 0 0 0} 0 0 <nil> 0 map[] {0 0}}
+2020/12/17 09:30:56.868 [D] [init.go:33]  read config succ, redis addr:127.0.0.1:6379
+2020/12/17 09:30:56.868 [I] [main.go:17]  init sec success!
+2020/12/17 09:30:56.968 [I] [asm_amd64.s:1357]  http server Running on http://192.168.199.99:9091
+2020/12/17 09:32:16.603 [D] [server.go:2802]  |192.168.199.237|[97;43m 404 [0m|    492.905µs| nomatch|[97;44m GET     [0m /sec_info
+2020/12/17 09:32:16.667 [D] [server.go:2802]  |192.168.199.237|[97;43m 404 [0m|    358.837µs| nomatch|[97;44m GET     [0m /favicon.ico
+2020/12/17 09:32:45.032 [D] [value.go:460]  this is SecInfo!!!
+2020/12/17 09:32:45.032 [D] [skill.go:31]  get product[1029]， result[map[end:true product_id:1029 start:false status:sec kill is already end]], all[map[1:0xc00003ef90 2:0xc00003efc0 1027:0xc00003ef60 1029:0xc00003ef30]] v[&{1029 1505008800 1505012400 0 1000 1000}]
+2020/12/17 09:32:45.032 [D] [skill.go:31]  get product[2]， result[map[end:false product_id:2 start:false status:sec kill is not start]], all[map[1:0xc00003ef90 2:0xc00003efc0 1027:0xc00003ef60 1029:0xc00003ef30]] v[&{2 1608266320 1608599320 0 100 0}]
+2020/12/17 09:32:45.033 [D] [skill.go:31]  get product[1027]， result[map[end:true product_id:1027 start:false status:sec kill is already end]], all[map[1:0xc00003ef90 2:0xc00003efc0 1027:0xc00003ef60 1029:0xc00003ef30]] v[&{1027 1505008800 1505012400 0 2000 1000}]
+2020/12/17 09:32:45.033 [D] [skill.go:31]  get product[1]， result[map[end:false product_id:1 start:false status:sec kill is not start]], all[map[1:0xc00003ef90 2:0xc00003efc0 1027:0xc00003ef60 1029:0xc00003ef30]] v[&{1 1608186520 1608199320 0 100 0}]
+2020/12/17 09:32:45.033 [D] [server.go:2802]  |192.168.199.237|[97;42m 200 [0m|    885.608µs|   match|[97;44m GET     [0m /secinfo   r:/secinfo
+2020/12/17 09:44:03.954 [D] [value.go:460]  this is SecInfo!!!
+2020/12/17 09:44:03.954 [D] [skill.go:31]  get product[1]， result[map[end:false product_id:1 start:false status:sec kill is not start]], all[map[1:0xc00003ef90 2:0xc00003efc0 1027:0xc00003ef60 1029:0xc00003ef30]] v[&{1 1608186520 1608199320 0 100 0}]
+2020/12/17 09:44:03.954 [D] [skill.go:31]  get product[1029]， result[map[end:true product_id:1029 start:false status:sec kill is already end]], all[map[1:0xc00003ef90 2:0xc00003efc0 1027:0xc00003ef60 1029:0xc00003ef30]] v[&{1029 1505008800 1505012400 0 1000 1000}]
+2020/12/17 09:44:03.954 [D] [skill.go:31]  get product[2]， result[map[end:false product_id:2 start:false status:sec kill is not start]], all[map[1:0xc00003ef90 2:0xc00003efc0 1027:0xc00003ef60 1029:0xc00003ef30]] v[&{2 1608266320 1608599320 0 100 0}]
+2020/12/17 09:44:03.955 [D] [skill.go:31]  get product[1027]， result[map[end:true product_id:1027 start:false status:sec kill is already end]], all[map[1:0xc00003ef90 2:0xc00003efc0 1027:0xc00003ef60 1029:0xc00003ef30]] v[&{1027 1505008800 1505012400 0 2000 1000}]
+2020/12/17 09:44:03.955 [D] [server.go:2802]  |192.168.199.237|[97;42m 200 [0m|    1.67403ms|   match|[97;44m GET     [0m /secinfo   r:/secinfo
+2020/12/17 09:44:05.713 [D] [value.go:460]  this is SecInfo!!!
+2020/12/17 09:44:05.713 [D] [skill.go:31]  get product[1029]， result[map[end:true product_id:1029 start:false status:sec kill is already end]], all[map[1:0xc00003ef90 2:0xc00003efc0 1027:0xc00003ef60 1029:0xc00003ef30]] v[&{1029 1505008800 1505012400 0 1000 1000}]
+2020/12/17 09:44:05.713 [D] [skill.go:31]  get product[2]， result[map[end:false product_id:2 start:false status:sec kill is not start]], all[map[1:0xc00003ef90 2:0xc00003efc0 1027:0xc00003ef60 1029:0xc00003ef30]] v[&{2 1608266320 1608599320 0 100 0}]
+2020/12/17 09:44:05.713 [D] [skill.go:31]  get product[1027]， result[map[end:true product_id:1027 start:false status:sec kill is already end]], all[map[1:0xc00003ef90 2:0xc00003efc0 1027:0xc00003ef60 1029:0xc00003ef30]] v[&{1027 1505008800 1505012400 0 2000 1000}]
+2020/12/17 09:44:05.714 [D] [skill.go:31]  get product[1]， result[map[end:false product_id:1 start:false status:sec kill is not start]], all[map[1:0xc00003ef90 2:0xc00003efc0 1027:0xc00003ef60 1029:0xc00003ef30]] v[&{1 1608186520 1608199320 0 100 0}]
+2020/12/17 09:44:05.714 [D] [server.go:2802]  |192.168.199.237|[97;42m 200 [0m|   1.483677ms|   match|[97;44m GET     [0m /secinfo   r:/secinfo
+2020/12/17 09:44:06.504 [D] [value.go:460]  this is SecInfo!!!
+2020/12/17 09:44:06.504 [D] [skill.go:31]  get product[1027]， result[map[end:true product_id:1027 start:false status:sec kill is already end]], all[map[1:0xc00003ef90 2:0xc00003efc0 1027:0xc00003ef60 1029:0xc00003ef30]] v[&{1027 1505008800 1505012400 0 2000 1000}]
+2020/12/17 09:44:06.504 [D] [skill.go:31]  get product[1]， result[map[end:false product_id:1 start:false status:sec kill is not start]], all[map[1:0xc00003ef90 2:0xc00003efc0 1027:0xc00003ef60 1029:0xc00003ef30]] v[&{1 1608186520 1608199320 0 100 0}]
+2020/12/17 09:44:06.504 [D] [skill.go:31]  get product[1029]， result[map[end:true product_id:1029 start:false status:sec kill is already end]], all[map[1:0xc00003ef90 2:0xc00003efc0 1027:0xc00003ef60 1029:0xc00003ef30]] v[&{1029 1505008800 1505012400 0 1000 1000}]
+2020/12/17 09:44:06.504 [D] [skill.go:31]  get product[2]， result[map[end:false product_id:2 start:false status:sec kill is not start]], all[map[1:0xc00003ef90 2:0xc00003efc0 1027:0xc00003ef60 1029:0xc00003ef30]] v[&{2 1608266320 1608599320 0 100 0}]
+2020/12/17 09:44:06.504 [D] [server.go:2802]  |192.168.199.237|[97;42m 200 [0m|    831.424µs|   match|[97;44m GET     [0m /secinfo   r:/secinfo
+2020/12/17 09:44:07.072 [D] [value.go:460]  this is SecInfo!!!
+2020/12/17 09:44:07.072 [D] [skill.go:31]  get product[1]， result[map[end:false product_id:1 start:false status:sec kill is not start]], all[map[1:0xc00003ef90 2:0xc00003efc0 1027:0xc00003ef60 1029:0xc00003ef30]] v[&{1 1608186520 1608199320 0 100 0}]
+2020/12/17 09:44:07.072 [D] [skill.go:31]  get product[1029]， result[map[end:true product_id:1029 start:false status:sec kill is already end]], all[map[1:0xc00003ef90 2:0xc00003efc0 1027:0xc00003ef60 1029:0xc00003ef30]] v[&{1029 1505008800 1505012400 0 1000 1000}]
+2020/12/17 09:44:07.073 [D] [skill.go:31]  get product[2]， result[map[end:false product_id:2 start:false status:sec kill is not start]], all[map[1:0xc00003ef90 2:0xc00003efc0 1027:0xc00003ef60 1029:0xc00003ef30]] v[&{2 1608266320 1608599320 0 100 0}]
+2020/12/17 09:44:07.073 [D] [skill.go:31]  get product[1027]， result[map[end:true product_id:1027 start:false status:sec kill is already end]], all[map[1:0xc00003ef90 2:0xc00003efc0 1027:0xc00003ef60 1029:0xc00003ef30]] v[&{1027 1505008800 1505012400 0 2000 1000}]
+2020/12/17 09:44:07.073 [D] [server.go:2802]  |192.168.199.237|[97;42m 200 [0m|   1.591694ms|   match|[97;44m GET     [0m /secinfo   r:/secinfo
+2020/12/17 09:44:07.705 [D] [value.go:460]  this is SecInfo!!!
+2020/12/17 09:44:07.705 [D] [skill.go:31]  get product[2]， result[map[end:false product_id:2 start:false status:sec kill is not start]], all[map[1:0xc00003ef90 2:0xc00003efc0 1027:0xc00003ef60 1029:0xc00003ef30]] v[&{2 1608266320 1608599320 0 100 0}]
+2020/12/17 09:44:07.705 [D] [skill.go:31]  get product[1027]， result[map[end:true product_id:1027 start:false status:sec kill is already end]], all[map[1:0xc00003ef90 2:0xc00003efc0 1027:0xc00003ef60 1029:0xc00003ef30]] v[&{1027 1505008800 1505012400 0 2000 1000}]
+2020/12/17 09:44:07.706 [D] [skill.go:31]  get product[1]， result[map[end:false product_id:1 start:false status:sec kill is not start]], all[map[1:0xc00003ef90 2:0xc00003efc0 1027:0xc00003ef60 1029:0xc00003ef30]] v[&{1 1608186520 1608199320 0 100 0}]
+2020/12/17 09:44:07.706 [D] [skill.go:31]  get product[1029]， result[map[end:true product_id:1029 start:false status:sec kill is already end]], all[map[1:0xc00003ef90 2:0xc00003efc0 1027:0xc00003ef60 1029:0xc00003ef30]] v[&{1029 1505008800 1505012400 0 1000 1000}]
+2020/12/17 09:44:07.706 [D] [server.go:2802]  |192.168.199.237|[97;42m 200 [0m|   1.618536ms|   match|[97;44m GET     [0m /secinfo   r:/secinfo
+2020/12/17 09:44:08.367 [D] [value.go:460]  this is SecInfo!!!
+2020/12/17 09:44:08.368 [D] [skill.go:31]  get product[1029]， result[map[end:true product_id:1029 start:false status:sec kill is already end]], all[map[1:0xc00003ef90 2:0xc00003efc0 1027:0xc00003ef60 1029:0xc00003ef30]] v[&{1029 1505008800 1505012400 0 1000 1000}]
+2020/12/17 09:44:08.368 [D] [skill.go:31]  get product[2]， result[map[end:false product_id:2 start:false status:sec kill is not start]], all[map[1:0xc00003ef90 2:0xc00003efc0 1027:0xc00003ef60 1029:0xc00003ef30]] v[&{2 1608266320 1608599320 0 100 0}]
+2020/12/17 09:44:08.368 [D] [skill.go:31]  get product[1027]， result[map[end:true product_id:1027 start:false status:sec kill is already end]], all[map[1:0xc00003ef90 2:0xc00003efc0 1027:0xc00003ef60 1029:0xc00003ef30]] v[&{1027 1505008800 1505012400 0 2000 1000}]
+2020/12/17 09:44:08.369 [D] [skill.go:31]  get product[1]， result[map[end:false product_id:1 start:false status:sec kill is not start]], all[map[1:0xc00003ef90 2:0xc00003efc0 1027:0xc00003ef60 1029:0xc00003ef30]] v[&{1 1608186520 1608199320 0 100 0}]
+2020/12/17 09:44:08.369 [D] [server.go:2802]  |192.168.199.237|[97;42m 200 [0m|    1.47832ms|   match|[97;44m GET     [0m /secinfo   r:/secinfo
+2020/12/17 09:44:09.542 [D] [value.go:460]  this is SecInfo!!!
+2020/12/17 09:44:09.542 [D] [skill.go:31]  get product[1]， result[map[end:false product_id:1 start:false status:sec kill is not start]], all[map[1:0xc00003ef90 2:0xc00003efc0 1027:0xc00003ef60 1029:0xc00003ef30]] v[&{1 1608186520 1608199320 0 100 0}]
+2020/12/17 09:44:09.543 [D] [skill.go:31]  get product[1029]， result[map[end:true product_id:1029 start:false status:sec kill is already end]], all[map[1:0xc00003ef90 2:0xc00003efc0 1027:0xc00003ef60 1029:0xc00003ef30]] v[&{1029 1505008800 1505012400 0 1000 1000}]
+2020/12/17 09:44:09.543 [D] [skill.go:31]  get product[2]， result[map[end:false product_id:2 start:false status:sec kill is not start]], all[map[1:0xc00003ef90 2:0xc00003efc0 1027:0xc00003ef60 1029:0xc00003ef30]] v[&{2 1608266320 1608599320 0 100 0}]
+2020/12/17 09:44:09.543 [D] [skill.go:31]  get product[1027]， result[map[end:true product_id:1027 start:false status:sec kill is already end]], all[map[1:0xc00003ef90 2:0xc00003efc0 1027:0xc00003ef60 1029:0xc00003ef30]] v[&{1027 1505008800 1505012400 0 2000 1000}]
+2020/12/17 09:44:09.543 [D] [server.go:2802]  |192.168.199.237|[97;42m 200 [0m|    708.763µs|   match|[97;44m GET     [0m /secinfo   r:/secinfo
+2020/12/17 09:44:10.144 [D] [value.go:460]  this is SecInfo!!!
+2020/12/17 09:44:10.144 [D] [skill.go:31]  get product[1029]， result[map[end:true product_id:1029 start:false status:sec kill is already end]], all[map[1:0xc00003ef90 2:0xc00003efc0 1027:0xc00003ef60 1029:0xc00003ef30]] v[&{1029 1505008800 1505012400 0 1000 1000}]
+2020/12/17 09:44:10.144 [D] [skill.go:31]  get product[2]， result[map[end:false product_id:2 start:false status:sec kill is not start]], all[map[1:0xc00003ef90 2:0xc00003efc0 1027:0xc00003ef60 1029:0xc00003ef30]] v[&{2 1608266320 1608599320 0 100 0}]
+2020/12/17 09:44:10.145 [D] [skill.go:31]  get product[1027]， result[map[end:true product_id:1027 start:false status:sec kill is already end]], all[map[1:0xc00003ef90 2:0xc00003efc0 1027:0xc00003ef60 1029:0xc00003ef30]] v[&{1027 1505008800 1505012400 0 2000 1000}]
+2020/12/17 09:44:10.145 [D] [skill.go:31]  get product[1]， result[map[end:false product_id:1 start:false status:sec kill is not start]], all[map[1:0xc00003ef90 2:0xc00003efc0 1027:0xc00003ef60 1029:0xc00003ef30]] v[&{1 1608186520 1608199320 0 100 0}]
+2020/12/17 09:44:10.145 [D] [server.go:2802]  |192.168.199.237|[97;42m 200 [0m|   1.590053ms|   match|[97;44m GET     [0m /secinfo   r:/secinfo
+2020/12/17 09:44:11.954 [D] [value.go:460]  this is SecInfo!!!
+2020/12/17 09:44:11.954 [D] [skill.go:31]  get product[2]， result[map[end:false product_id:2 start:false status:sec kill is not start]], all[map[1:0xc00003ef90 2:0xc00003efc0 1027:0xc00003ef60 1029:0xc00003ef30]] v[&{2 1608266320 1608599320 0 100 0}]
+2020/12/17 09:44:11.954 [D] [skill.go:31]  get product[1027]， result[map[end:true product_id:1027 start:false status:sec kill is already end]], all[map[1:0xc00003ef90 2:0xc00003efc0 1027:0xc00003ef60 1029:0xc00003ef30]] v[&{1027 1505008800 1505012400 0 2000 1000}]
+2020/12/17 09:44:11.954 [D] [skill.go:31]  get product[1]， result[map[end:false product_id:1 start:false status:sec kill is not start]], all[map[1:0xc00003ef90 2:0xc00003efc0 1027:0xc00003ef60 1029:0xc00003ef30]] v[&{1 1608186520 1608199320 0 100 0}]
+2020/12/17 09:44:11.955 [D] [skill.go:31]  get product[1029]， result[map[end:true product_id:1029 start:false status:sec kill is already end]], all[map[1:0xc00003ef90 2:0xc00003efc0 1027:0xc00003ef60 1029:0xc00003ef30]] v[&{1029 1505008800 1505012400 0 1000 1000}]
+2020/12/17 09:44:11.955 [D] [server.go:2802]  |192.168.199.237|[97;42m 200 [0m|   1.623906ms|   match|[97;44m GET     [0m /secinfo   r:/secinfo
+2020/12/17 09:44:18.579 [D] [value.go:460]  this is SecInfo!!!
+2020/12/17 09:44:18.579 [D] [skill.go:31]  get product[1027]， result[map[end:true product_id:1027 start:false status:sec kill is already end]], all[map[1:0xc00003ef90 2:0xc00003efc0 1027:0xc00003ef60 1029:0xc00003ef30]] v[&{1027 1505008800 1505012400 0 2000 1000}]
+2020/12/17 09:44:18.579 [D] [skill.go:31]  get product[1]， result[map[end:false product_id:1 start:false status:sec kill is not start]], all[map[1:0xc00003ef90 2:0xc00003efc0 1027:0xc00003ef60 1029:0xc00003ef30]] v[&{1 1608186520 1608199320 0 100 0}]
+2020/12/17 09:44:18.579 [D] [skill.go:31]  get product[1029]， result[map[end:true product_id:1029 start:false status:sec kill is already end]], all[map[1:0xc00003ef90 2:0xc00003efc0 1027:0xc00003ef60 1029:0xc00003ef30]] v[&{1029 1505008800 1505012400 0 1000 1000}]
+2020/12/17 09:44:18.579 [D] [skill.go:31]  get product[2]， result[map[end:false product_id:2 start:false status:sec kill is not start]], all[map[1:0xc00003ef90 2:0xc00003efc0 1027:0xc00003ef60 1029:0xc00003ef30]] v[&{2 1608266320 1608599320 0 100 0}]
+2020/12/17 09:44:18.579 [D] [server.go:2802]  |192.168.199.237|[97;42m 200 [0m|    764.996µs|   match|[97;44m GET     [0m /secinfo   r:/secinfo
+2020/12/17 09:49:40.596 [D] [server.go:2802]  |192.168.199.237|[97;43m 404 [0m|    443.297µs| nomatch|[97;44m GET     [0m /  
+2020/12/17 09:52:07.726 [D] [value.go:460]  this is SecInfo!!!
+2020/12/17 09:52:07.726 [D] [skill.go:31]  get product[1029]， result[map[end:true product_id:1029 start:false status:sec kill is already end]], all[map[1:0xc00003ef90 2:0xc00003efc0 1027:0xc00003ef60 1029:0xc00003ef30]] v[&{1029 1505008800 1505012400 0 1000 1000}]
+2020/12/17 09:52:07.727 [D] [skill.go:31]  get product[2]， result[map[end:false product_id:2 start:false status:sec kill is not start]], all[map[1:0xc00003ef90 2:0xc00003efc0 1027:0xc00003ef60 1029:0xc00003ef30]] v[&{2 1608266320 1608599320 0 100 0}]
+2020/12/17 09:52:07.727 [D] [skill.go:31]  get product[1027]， result[map[end:true product_id:1027 start:false status:sec kill is already end]], all[map[1:0xc00003ef90 2:0xc00003efc0 1027:0xc00003ef60 1029:0xc00003ef30]] v[&{1027 1505008800 1505012400 0 2000 1000}]
+2020/12/17 09:52:07.727 [D] [skill.go:31]  get product[1]， result[map[end:false product_id:1 start:false status:sec kill is not start]], all[map[1:0xc00003ef90 2:0xc00003efc0 1027:0xc00003ef60 1029:0xc00003ef30]] v[&{1 1608186520 1608199320 0 100 0}]
+2020/12/17 09:52:07.728 [D] [server.go:2802]  |192.168.199.237|[97;42m 200 [0m|   1.517703ms|   match|[97;44m GET     [0m /secinfo   r:/secinfo
+2020/12/17 09:52:08.971 [D] [value.go:460]  this is SecInfo!!!
+2020/12/17 09:52:08.972 [D] [skill.go:31]  get product[1029]， result[map[end:true product_id:1029 start:false status:sec kill is already end]], all[map[1:0xc00003ef90 2:0xc00003efc0 1027:0xc00003ef60 1029:0xc00003ef30]] v[&{1029 1505008800 1505012400 0 1000 1000}]
+2020/12/17 09:52:08.972 [D] [skill.go:31]  get product[2]， result[map[end:false product_id:2 start:false status:sec kill is not start]], all[map[1:0xc00003ef90 2:0xc00003efc0 1027:0xc00003ef60 1029:0xc00003ef30]] v[&{2 1608266320 1608599320 0 100 0}]
+2020/12/17 09:52:08.972 [D] [skill.go:31]  get product[1027]， result[map[end:true product_id:1027 start:false status:sec kill is already end]], all[map[1:0xc00003ef90 2:0xc00003efc0 1027:0xc00003ef60 1029:0xc00003ef30]] v[&{1027 1505008800 1505012400 0 2000 1000}]
+2020/12/17 09:52:08.973 [D] [skill.go:31]  get product[1]， result[map[end:false product_id:1 start:false status:sec kill is not start]], all[map[1:0xc00003ef90 2:0xc00003efc0 1027:0xc00003ef60 1029:0xc00003ef30]] v[&{1 1608186520 1608199320 0 100 0}]
+2020/12/17 09:52:08.973 [D] [server.go:2802]  |192.168.199.237|[97;42m 200 [0m|   1.449435ms|   match|[97;44m GET     [0m /secinfo   r:/secinfo
+2020/12/17 09:52:09.437 [D] [value.go:460]  this is SecInfo!!!
+2020/12/17 09:52:09.437 [D] [skill.go:31]  get product[1]， result[map[end:false product_id:1 start:false status:sec kill is not start]], all[map[1:0xc00003ef90 2:0xc00003efc0 1027:0xc00003ef60 1029:0xc00003ef30]] v[&{1 1608186520 1608199320 0 100 0}]
+2020/12/17 09:52:09.437 [D] [skill.go:31]  get product[1029]， result[map[end:true product_id:1029 start:false status:sec kill is already end]], all[map[1:0xc00003ef90 2:0xc00003efc0 1027:0xc00003ef60 1029:0xc00003ef30]] v[&{1029 1505008800 1505012400 0 1000 1000}]
+2020/12/17 09:52:09.437 [D] [skill.go:31]  get product[2]， result[map[end:false product_id:2 start:false status:sec kill is not start]], all[map[1:0xc00003ef90 2:0xc00003efc0 1027:0xc00003ef60 1029:0xc00003ef30]] v[&{2 1608266320 1608599320 0 100 0}]
+2020/12/17 09:52:09.438 [D] [skill.go:31]  get product[1027]， result[map[end:true product_id:1027 start:false status:sec kill is already end]], all[map[1:0xc00003ef90 2:0xc00003efc0 1027:0xc00003ef60 1029:0xc00003ef30]] v[&{1027 1505008800 1505012400 0 2000 1000}]
+2020/12/17 09:52:09.438 [D] [server.go:2802]  |192.168.199.237|[97;42m 200 [0m|   1.509431ms|   match|[97;44m GET     [0m /secinfo   r:/secinfo
+2020/12/17 09:52:09.692 [D] [value.go:460]  this is SecInfo!!!
+2020/12/17 09:52:09.692 [D] [skill.go:31]  get product[1027]， result[map[end:true product_id:1027 start:false status:sec kill is already end]], all[map[1:0xc00003ef90 2:0xc00003efc0 1027:0xc00003ef60 1029:0xc00003ef30]] v[&{1027 1505008800 1505012400 0 2000 1000}]
+2020/12/17 09:52:09.692 [D] [skill.go:31]  get product[1]， result[map[end:false product_id:1 start:false status:sec kill is not start]], all[map[1:0xc00003ef90 2:0xc00003efc0 1027:0xc00003ef60 1029:0xc00003ef30]] v[&{1 1608186520 1608199320 0 100 0}]
+2020/12/17 09:52:09.693 [D] [skill.go:31]  get product[1029]， result[map[end:true product_id:1029 start:false status:sec kill is already end]], all[map[1:0xc00003ef90 2:0xc00003efc0 1027:0xc00003ef60 1029:0xc00003ef30]] v[&{1029 1505008800 1505012400 0 1000 1000}]
+2020/12/17 09:52:09.693 [D] [skill.go:31]  get product[2]， result[map[end:false product_id:2 start:false status:sec kill is not start]], all[map[1:0xc00003ef90 2:0xc00003efc0 1027:0xc00003ef60 1029:0xc00003ef30]] v[&{2 1608266320 1608599320 0 100 0}]
+2020/12/17 09:52:09.693 [D] [server.go:2802]  |192.168.199.237|[97;42m 200 [0m|   1.458743ms|   match|[97;44m GET     [0m /secinfo   r:/secinfo
+2020/12/17 09:52:11.772 [D] [value.go:460]  this is SecInfo!!!
+2020/12/17 09:52:11.773 [D] [skill.go:31]  get product[1]， result[map[end:false product_id:1 start:false status:sec kill is not start]], all[map[1:0xc00003ef90 2:0xc00003efc0 1027:0xc00003ef60 1029:0xc00003ef30]] v[&{1 1608186520 1608199320 0 100 0}]
+2020/12/17 09:52:11.773 [D] [skill.go:31]  get product[1029]， result[map[end:true product_id:1029 start:false status:sec kill is already end]], all[map[1:0xc00003ef90 2:0xc00003efc0 1027:0xc00003ef60 1029:0xc00003ef30]] v[&{1029 1505008800 1505012400 0 1000 1000}]
+2020/12/17 09:52:11.773 [D] [skill.go:31]  get product[2]， result[map[end:false product_id:2 start:false status:sec kill is not start]], all[map[1:0xc00003ef90 2:0xc00003efc0 1027:0xc00003ef60 1029:0xc00003ef30]] v[&{2 1608266320 1608599320 0 100 0}]
+2020/12/17 09:52:11.773 [D] [skill.go:31]  get product[1027]， result[map[end:true product_id:1027 start:false status:sec kill is already end]], all[map[1:0xc00003ef90 2:0xc00003efc0 1027:0xc00003ef60 1029:0xc00003ef30]] v[&{1027 1505008800 1505012400 0 2000 1000}]
+2020/12/17 09:52:11.774 [D] [server.go:2802]  |192.168.199.237|[97;42m 200 [0m|   1.543872ms|   match|[97;44m GET     [0m /secinfo   r:/secinfo
+2020/12/17 09:52:22.842 [D] [value.go:460]  this is SecInfo!!!
+2020/12/17 09:52:22.843 [D] [skill.go:31]  get product[1029]， result[map[end:true product_id:1029 start:false status:sec kill is already end]], all[map[1:0xc00003ef90 2:0xc00003efc0 1027:0xc00003ef60 1029:0xc00003ef30]] v[&{1029 1505008800 1505012400 0 1000 1000}]
+2020/12/17 09:52:22.843 [D] [skill.go:31]  get product[2]， result[map[end:false product_id:2 start:false status:sec kill is not start]], all[map[1:0xc00003ef90 2:0xc00003efc0 1027:0xc00003ef60 1029:0xc00003ef30]] v[&{2 1608266320 1608599320 0 100 0}]
+2020/12/17 09:52:22.843 [D] [skill.go:31]  get product[1027]， result[map[end:true product_id:1027 start:false status:sec kill is already end]], all[map[1:0xc00003ef90 2:0xc00003efc0 1027:0xc00003ef60 1029:0xc00003ef30]] v[&{1027 1505008800 1505012400 0 2000 1000}]
+2020/12/17 09:52:22.843 [D] [skill.go:31]  get product[1]， result[map[end:false product_id:1 start:false status:sec kill is not start]], all[map[1:0xc00003ef90 2:0xc00003efc0 1027:0xc00003ef60 1029:0xc00003ef30]] v[&{1 1608186520 1608199320 0 100 0}]
+2020/12/17 09:52:22.844 [D] [server.go:2802]  |192.168.199.237|[97;42m 200 [0m|   1.515882ms|   match|[97;44m GET     [0m /secinfo   r:/secinfo
+2020/12/17 09:52:48.373 [D] [value.go:460]  this is SecInfo!!!
+2020/12/17 09:52:48.373 [D] [skill.go:31]  get product[1029]， result[map[end:true product_id:1029 start:false status:sec kill is already end]], all[map[1:0xc00003ef90 2:0xc00003efc0 1027:0xc00003ef60 1029:0xc00003ef30]] v[&{1029 1505008800 1505012400 0 1000 1000}]
+2020/12/17 09:52:48.373 [D] [skill.go:31]  get product[2]， result[map[end:false product_id:2 start:false status:sec kill is not start]], all[map[1:0xc00003ef90 2:0xc00003efc0 1027:0xc00003ef60 1029:0xc00003ef30]] v[&{2 1608266320 1608599320 0 100 0}]
+2020/12/17 09:52:48.373 [D] [skill.go:31]  get product[1027]， result[map[end:true product_id:1027 start:false status:sec kill is already end]], all[map[1:0xc00003ef90 2:0xc00003efc0 1027:0xc00003ef60 1029:0xc00003ef30]] v[&{1027 1505008800 1505012400 0 2000 1000}]
+2020/12/17 09:52:48.374 [D] [skill.go:31]  get product[1]， result[map[end:false product_id:1 start:false status:sec kill is not start]], all[map[1:0xc00003ef90 2:0xc00003efc0 1027:0xc00003ef60 1029:0xc00003ef30]] v[&{1 1608186520 1608199320 0 100 0}]
+2020/12/17 09:52:48.374 [D] [server.go:2802]  |192.168.199.237|[97;42m 200 [0m|   1.579233ms|   match|[97;44m GET     [0m /secinfo   r:/secinfo
+2020/12/17 10:00:23.891 [D] [value.go:460]  this is SecInfo!!!
+2020/12/17 10:00:23.891 [D] [skill.go:31]  get product[1029]， result[map[end:true product_id:1029 start:false status:sec kill is already end]], all[map[1:0xc00003ef90 2:0xc00003efc0 1027:0xc00003ef60 1029:0xc00003ef30]] v[&{1029 1505008800 1505012400 0 1000 1000}]
+2020/12/17 10:00:23.891 [D] [skill.go:31]  get product[2]， result[map[end:false product_id:2 start:false status:sec kill is not start]], all[map[1:0xc00003ef90 2:0xc00003efc0 1027:0xc00003ef60 1029:0xc00003ef30]] v[&{2 1608266320 1608599320 0 100 0}]
+2020/12/17 10:00:23.891 [D] [skill.go:31]  get product[1027]， result[map[end:true product_id:1027 start:false status:sec kill is already end]], all[map[1:0xc00003ef90 2:0xc00003efc0 1027:0xc00003ef60 1029:0xc00003ef30]] v[&{1027 1505008800 1505012400 0 2000 1000}]
+2020/12/17 10:00:23.892 [D] [skill.go:31]  get product[1]， result[map[end:false product_id:1 start:false status:sec kill is not start]], all[map[1:0xc00003ef90 2:0xc00003efc0 1027:0xc00003ef60 1029:0xc00003ef30]] v[&{1 1608186520 1608199320 0 100 0}]
+2020/12/17 10:00:23.892 [D] [server.go:2802]  |192.168.199.237|[97;42m 200 [0m|   1.566702ms|   match|[97;44m GET     [0m /secinfo   r:/secinfo
+2020/12/17 10:00:24.521 [D] [value.go:460]  this is SecInfo!!!
+2020/12/17 10:00:24.522 [D] [skill.go:31]  get product[1029]， result[map[end:true product_id:1029 start:false status:sec kill is already end]], all[map[1:0xc00003ef90 2:0xc00003efc0 1027:0xc00003ef60 1029:0xc00003ef30]] v[&{1029 1505008800 1505012400 0 1000 1000}]
+2020/12/17 10:00:24.522 [D] [skill.go:31]  get product[2]， result[map[end:false product_id:2 start:false status:sec kill is not start]], all[map[1:0xc00003ef90 2:0xc00003efc0 1027:0xc00003ef60 1029:0xc00003ef30]] v[&{2 1608266320 1608599320 0 100 0}]
+2020/12/17 10:00:24.522 [D] [skill.go:31]  get product[1027]， result[map[end:true product_id:1027 start:false status:sec kill is already end]], all[map[1:0xc00003ef90 2:0xc00003efc0 1027:0xc00003ef60 1029:0xc00003ef30]] v[&{1027 1505008800 1505012400 0 2000 1000}]
+2020/12/17 10:00:24.522 [D] [skill.go:31]  get product[1]， result[map[end:false product_id:1 start:false status:sec kill is not start]], all[map[1:0xc00003ef90 2:0xc00003efc0 1027:0xc00003ef60 1029:0xc00003ef30]] v[&{1 1608186520 1608199320 0 100 0}]
+2020/12/17 10:00:24.523 [D] [server.go:2802]  |192.168.199.237|[97;42m 200 [0m|   1.442509ms|   match|[97;44m GET     [0m /secinfo   r:/secinfo
+2020/12/17 10:00:25.216 [D] [value.go:460]  this is SecInfo!!!
+2020/12/17 10:00:25.217 [D] [skill.go:31]  get product[1029]， result[map[end:true product_id:1029 start:false status:sec kill is already end]], all[map[1:0xc00003ef90 2:0xc00003efc0 1027:0xc00003ef60 1029:0xc00003ef30]] v[&{1029 1505008800 1505012400 0 1000 1000}]
+2020/12/17 10:00:25.217 [D] [skill.go:31]  get product[2]， result[map[end:false product_id:2 start:false status:sec kill is not start]], all[map[1:0xc00003ef90 2:0xc00003efc0 1027:0xc00003ef60 1029:0xc00003ef30]] v[&{2 1608266320 1608599320 0 100 0}]
+2020/12/17 10:00:25.217 [D] [skill.go:31]  get product[1027]， result[map[end:true product_id:1027 start:false status:sec kill is already end]], all[map[1:0xc00003ef90 2:0xc00003efc0 1027:0xc00003ef60 1029:0xc00003ef30]] v[&{1027 1505008800 1505012400 0 2000 1000}]
+2020/12/17 10:00:25.217 [D] [skill.go:31]  get product[1]， result[map[end:false product_id:1 start:false status:sec kill is not start]], all[map[1:0xc00003ef90 2:0xc00003efc0 1027:0xc00003ef60 1029:0xc00003ef30]] v[&{1 1608186520 1608199320 0 100 0}]
+2020/12/17 10:00:25.218 [D] [server.go:2802]  |192.168.199.237|[97;42m 200 [0m|   1.899202ms|   match|[97;44m GET     [0m /secinfo   r:/secinfo
+2020/12/17 10:00:25.601 [D] [value.go:460]  this is SecInfo!!!
+2020/12/17 10:00:25.601 [D] [skill.go:31]  get product[1029]， result[map[end:true product_id:1029 start:false status:sec kill is already end]], all[map[1:0xc00003ef90 2:0xc00003efc0 1027:0xc00003ef60 1029:0xc00003ef30]] v[&{1029 1505008800 1505012400 0 1000 1000}]
+2020/12/17 10:00:25.601 [D] [skill.go:31]  get product[2]， result[map[end:false product_id:2 start:false status:sec kill is not start]], all[map[1:0xc00003ef90 2:0xc00003efc0 1027:0xc00003ef60 1029:0xc00003ef30]] v[&{2 1608266320 1608599320 0 100 0}]
+2020/12/17 10:00:25.601 [D] [skill.go:31]  get product[1027]， result[map[end:true product_id:1027 start:false status:sec kill is already end]], all[map[1:0xc00003ef90 2:0xc00003efc0 1027:0xc00003ef60 1029:0xc00003ef30]] v[&{1027 1505008800 1505012400 0 2000 1000}]
+2020/12/17 10:00:25.602 [D] [skill.go:31]  get product[1]， result[map[end:false product_id:1 start:false status:sec kill is not start]], all[map[1:0xc00003ef90 2:0xc00003efc0 1027:0xc00003ef60 1029:0xc00003ef30]] v[&{1 1608186520 1608199320 0 100 0}]
+2020/12/17 10:00:25.602 [D] [server.go:2802]  |192.168.199.237|[97;42m 200 [0m|   1.543978ms|   match|[97;44m GET     [0m /secinfo   r:/secinfo
+2020/12/17 10:00:25.889 [D] [value.go:460]  this is SecInfo!!!
+2020/12/17 10:00:25.890 [D] [skill.go:31]  get product[1]， result[map[end:false product_id:1 start:false status:sec kill is not start]], all[map[1:0xc00003ef90 2:0xc00003efc0 1027:0xc00003ef60 1029:0xc00003ef30]] v[&{1 1608186520 1608199320 0 100 0}]
+2020/12/17 10:00:25.890 [D] [skill.go:31]  get product[1029]， result[map[end:true product_id:1029 start:false status:sec kill is already end]], all[map[1:0xc00003ef90 2:0xc00003efc0 1027:0xc00003ef60 1029:0xc00003ef30]] v[&{1029 1505008800 1505012400 0 1000 1000}]
+2020/12/17 10:00:25.890 [D] [skill.go:31]  get product[2]， result[map[end:false product_id:2 start:false status:sec kill is not start]], all[map[1:0xc00003ef90 2:0xc00003efc0 1027:0xc00003ef60 1029:0xc00003ef30]] v[&{2 1608266320 1608599320 0 100 0}]
+2020/12/17 10:00:25.890 [D] [skill.go:31]  get product[1027]， result[map[end:true product_id:1027 start:false status:sec kill is already end]], all[map[1:0xc00003ef90 2:0xc00003efc0 1027:0xc00003ef60 1029:0xc00003ef30]] v[&{1027 1505008800 1505012400 0 2000 1000}]
+2020/12/17 10:00:25.891 [D] [server.go:2802]  |192.168.199.237|[97;42m 200 [0m|   1.481242ms|   match|[97;44m GET     [0m /secinfo   r:/secinfo
+2020/12/17 10:00:27.272 [D] [value.go:460]  this is SecInfo!!!
+2020/12/17 10:00:27.272 [D] [skill.go:31]  get product[1029]， result[map[end:true product_id:1029 start:false status:sec kill is already end]], all[map[1:0xc00003ef90 2:0xc00003efc0 1027:0xc00003ef60 1029:0xc00003ef30]] v[&{1029 1505008800 1505012400 0 1000 1000}]
+2020/12/17 10:00:27.272 [D] [skill.go:31]  get product[2]， result[map[end:false product_id:2 start:false status:sec kill is not start]], all[map[1:0xc00003ef90 2:0xc00003efc0 1027:0xc00003ef60 1029:0xc00003ef30]] v[&{2 1608266320 1608599320 0 100 0}]
+2020/12/17 10:00:27.273 [D] [skill.go:31]  get product[1027]， result[map[end:true product_id:1027 start:false status:sec kill is already end]], all[map[1:0xc00003ef90 2:0xc00003efc0 1027:0xc00003ef60 1029:0xc00003ef30]] v[&{1027 1505008800 1505012400 0 2000 1000}]
+2020/12/17 10:00:27.273 [D] [skill.go:31]  get product[1]， result[map[end:false product_id:1 start:false status:sec kill is not start]], all[map[1:0xc00003ef90 2:0xc00003efc0 1027:0xc00003ef60 1029:0xc00003ef30]] v[&{1 1608186520 1608199320 0 100 0}]
+2020/12/17 10:00:27.273 [D] [server.go:2802]  |192.168.199.237|[97;42m 200 [0m|   1.260149ms|   match|[97;44m GET     [0m /secinfo   r:/secinfo
+2020/12/17 10:00:28.039 [D] [value.go:460]  this is SecInfo!!!
+2020/12/17 10:00:28.039 [D] [skill.go:31]  get product[1]， result[map[end:false product_id:1 start:false status:sec kill is not start]], all[map[1:0xc00003ef90 2:0xc00003efc0 1027:0xc00003ef60 1029:0xc00003ef30]] v[&{1 1608186520 1608199320 0 100 0}]
+2020/12/17 10:00:28.039 [D] [skill.go:31]  get product[1029]， result[map[end:true product_id:1029 start:false status:sec kill is already end]], all[map[1:0xc00003ef90 2:0xc00003efc0 1027:0xc00003ef60 1029:0xc00003ef30]] v[&{1029 1505008800 1505012400 0 1000 1000}]
+2020/12/17 10:00:28.040 [D] [skill.go:31]  get product[2]， result[map[end:false product_id:2 start:false status:sec kill is not start]], all[map[1:0xc00003ef90 2:0xc00003efc0 1027:0xc00003ef60 1029:0xc00003ef30]] v[&{2 1608266320 1608599320 0 100 0}]
+2020/12/17 10:00:28.040 [D] [skill.go:31]  get product[1027]， result[map[end:true product_id:1027 start:false status:sec kill is already end]], all[map[1:0xc00003ef90 2:0xc00003efc0 1027:0xc00003ef60 1029:0xc00003ef30]] v[&{1027 1505008800 1505012400 0 2000 1000}]
+2020/12/17 10:00:28.040 [D] [server.go:2802]  |192.168.199.237|[97;42m 200 [0m|   1.469827ms|   match|[97;44m GET     [0m /secinfo   r:/secinfo
+2020/12/17 10:00:29.096 [D] [value.go:460]  this is SecInfo!!!
+2020/12/17 10:00:29.097 [D] [skill.go:31]  get product[1029]， result[map[end:true product_id:1029 start:false status:sec kill is already end]], all[map[1:0xc00003ef90 2:0xc00003efc0 1027:0xc00003ef60 1029:0xc00003ef30]] v[&{1029 1505008800 1505012400 0 1000 1000}]
+2020/12/17 10:00:29.097 [D] [skill.go:31]  get product[2]， result[map[end:false product_id:2 start:false status:sec kill is not start]], all[map[1:0xc00003ef90 2:0xc00003efc0 1027:0xc00003ef60 1029:0xc00003ef30]] v[&{2 1608266320 1608599320 0 100 0}]
+2020/12/17 10:00:29.097 [D] [skill.go:31]  get product[1027]， result[map[end:true product_id:1027 start:false status:sec kill is already end]], all[map[1:0xc00003ef90 2:0xc00003efc0 1027:0xc00003ef60 1029:0xc00003ef30]] v[&{1027 1505008800 1505012400 0 2000 1000}]
+2020/12/17 10:00:29.098 [D] [skill.go:31]  get product[1]， result[map[end:false product_id:1 start:false status:sec kill is not start]], all[map[1:0xc00003ef90 2:0xc00003efc0 1027:0xc00003ef60 1029:0xc00003ef30]] v[&{1 1608186520 1608199320 0 100 0}]
+2020/12/17 10:00:29.098 [D] [server.go:2802]  |192.168.199.237|[97;42m 200 [0m|   1.595009ms|   match|[97;44m GET     [0m /secinfo   r:/secinfo
+2020/12/17 10:01:08.717 [D] [init.go:298]  initredis start
+2020/12/17 10:01:08.729 [D] [init.go:298]  initRedis success!!
+2020/12/17 10:01:08.730 [D] [init.go:305]  initEtcd success
+2020/12/17 10:01:08.730 [D] [init.go:312]  key is /ganyuefeng/backend/secskill/product
+2020/12/17 10:01:08.744 [D] [init.go:312]  key is /ganyuefeng/backend/secskill/product
+2020/12/17 10:01:08.744 [D] [init.go:312]  key[0] valud[key:"/ganyuefeng/backend/secskill/product" create_revision:34 mod_revision:37 version:4 value:"[{\"ProductId\":1029,\"StartTime\":1505008800,\"EndTime\":1505012400,\"Status\":0,\"Total\":1000,\"Left\":1000,\"OnePersonBuyLimit\":0,\"BuyRate\":0,\"SoldMaxLimit\":0},{\"ProductId\":1027,\"StartTime\":1505008800,\"EndTime\":1505012400,\"Status\":0,\"Total\":2000,\"Left\":1000,\"OnePersonBuyLimit\":0,\"BuyRate\":0,\"SoldMaxLimit\":0},{\"ProductId\":1,\"StartTime\":1608186520,\"EndTime\":1608199320,\"Status\":0,\"Total\":100,\"Left\":0,\"OnePersonBuyLimit\":3,\"BuyRate\":10,\"SoldMaxLimit\":50},{\"ProductId\":2,\"StartTime\":1608266320,\"EndTime\":1608599320,\"Status\":0,\"Total\":100,\"Left\":0,\"OnePersonBuyLimit\":3,\"BuyRate\":3,\"SoldMaxLimit\":3},{\"ProductId\":3,\"StartTime\":1608169920,\"EndTime\":1609169800,\"Status\":0,\"Total\":100,\"Left\":0,\"OnePersonBuyLimit\":3,\"BuyRate\":3,\"SoldMaxLimit\":3}]" ]
+2020/12/17 10:01:08.744 [D] [init.go:312]  ganyuefeng info conf is [[{1029 1505008800 1505012400 0 1000 1000} {1027 1505008800 1505012400 0 2000 1000} {1 1608186520 1608199320 0 100 0} {2 1608266320 1608599320 0 100 0} {3 1608169920 1609169800 0 100 0}]]
+2020/12/17 10:01:08.744 [D] [init.go:312]  loadSecConf success!
+2020/12/17 10:01:08.744 [D] [init.go:127]  initredis start
+2020/12/17 10:01:08.745 [D] [init.go:127]  initRedis success!!
+2020/12/17 10:01:08.745 [D] [init.go:318]  init service succ, config:&{{192.168.199.99:6379 64 0 30} { 0 0 0} { 0 0 0} {localhost:2379 5 /ganyuefeng/backend/secskill /ganyuefeng/backend/secskill/product} ./logs/sec.log debug map[1:0xc00003efc0 2:0xc00003eff0 3:0xc00003f020 1027:0xc00003ef90 1029:0xc00003ef60] {{0 0} 0 0 0 0} tyP87zZKzITuzaUjhmbqhNIDnyg6f2KP [localhost baidu.com/seckill] map[] map[] {50 1 500 10} 0xc000211180 <nil> <nil> <nil> {{0 0} 0 0 0 0} 0 0 <nil> 0 map[] {0 0}}
+2020/12/17 10:01:08.746 [D] [init.go:33]  read config succ, redis addr:127.0.0.1:6379
+2020/12/17 10:01:08.746 [I] [main.go:17]  init sec success!
+2020/12/17 10:01:08.773 [D] [asm_amd64.s:1357]  begin watch key:/ganyuefeng/backend/secskill/product
+2020/12/17 10:01:08.813 [I] [asm_amd64.s:1357]  http server Running on http://192.168.199.99:9091
+2020/12/17 10:01:18.565 [D] [value.go:460]  this is SecInfo!!!
+2020/12/17 10:01:18.566 [D] [skill.go:31]  get product[1029]， result[map[end:true product_id:1029 start:false status:sec kill is already end]], all[map[1:0xc00003efc0 2:0xc00003eff0 3:0xc00003f020 1027:0xc00003ef90 1029:0xc00003ef60]] v[&{1029 1505008800 1505012400 0 1000 1000}]
+2020/12/17 10:01:18.566 [D] [skill.go:31]  get product[3]， result[map[end:false product_id:3 start:true status:success]], all[map[1:0xc00003efc0 2:0xc00003eff0 3:0xc00003f020 1027:0xc00003ef90 1029:0xc00003ef60]] v[&{3 1608169920 1609169800 0 100 0}]
+2020/12/17 10:01:18.566 [D] [skill.go:31]  get product[1]， result[map[end:false product_id:1 start:false status:sec kill is not start]], all[map[1:0xc00003efc0 2:0xc00003eff0 3:0xc00003f020 1027:0xc00003ef90 1029:0xc00003ef60]] v[&{1 1608186520 1608199320 0 100 0}]
+2020/12/17 10:01:18.566 [D] [skill.go:31]  get product[2]， result[map[end:false product_id:2 start:false status:sec kill is not start]], all[map[1:0xc00003efc0 2:0xc00003eff0 3:0xc00003f020 1027:0xc00003ef90 1029:0xc00003ef60]] v[&{2 1608266320 1608599320 0 100 0}]
+2020/12/17 10:01:18.567 [D] [skill.go:31]  get product[1027]， result[map[end:true product_id:1027 start:false status:sec kill is already end]], all[map[1:0xc00003efc0 2:0xc00003eff0 3:0xc00003f020 1027:0xc00003ef90 1029:0xc00003ef60]] v[&{1027 1505008800 1505012400 0 2000 1000}]
+2020/12/17 10:01:18.567 [D] [server.go:2802]  |192.168.199.237|[97;42m 200 [0m|   2.191085ms|   match|[97;44m GET     [0m /secinfo   r:/secinfo
+2020/12/17 10:02:53.556 [D] [asm_amd64.s:1357]  get config from etcd, PUT "/ganyuefeng/backend/secskill/product" : "[{\"ProductId\":1029,\"StartTime\":1505008800,\"EndTime\":1505012400,\"Status\":0,\"Total\":1000,\"Left\":1000,\"OnePersonBuyLimit\":0,\"BuyRate\":0,\"SoldMaxLimit\":0},{\"ProductId\":1027,\"StartTime\":1505008800,\"EndTime\":1505012400,\"Status\":0,\"Total\":2000,\"Left\":1000,\"OnePersonBuyLimit\":0,\"BuyRate\":0,\"SoldMaxLimit\":0},{\"ProductId\":1,\"StartTime\":1608186520,\"EndTime\":1608199320,\"Status\":0,\"Total\":100,\"Left\":0,\"OnePersonBuyLimit\":3,\"BuyRate\":10,\"SoldMaxLimit\":50},{\"ProductId\":2,\"StartTime\":1608266320,\"EndTime\":1608599320,\"Status\":0,\"Total\":100,\"Left\":0,\"OnePersonBuyLimit\":3,\"BuyRate\":3,\"SoldMaxLimit\":3},{\"ProductId\":3,\"StartTime\":1608169920,\"EndTime\":1609169800,\"Status\":0,\"Total\":100,\"Left\":0,\"OnePersonBuyLimit\":3,\"BuyRate\":3,\"SoldMaxLimit\":3},{\"ProductId\":4,\"StartTime\":1608170700,\"EndTime\":1609170700,\"Status\":0,\"Total\":100,\"Left\":0,\"OnePersonBuyLimit\":3,\"BuyRate\":10,\"SoldMaxLimit\":3}]"
+
+2020/12/17 10:02:53.556 [D] [asm_amd64.s:1357]  get config from etcd succ, [{1029 1505008800 1505012400 0 1000 1000} {1027 1505008800 1505012400 0 2000 1000} {1 1608186520 1608199320 0 100 0} {2 1608266320 1608599320 0 100 0} {3 1608169920 1609169800 0 100 0} {4 1608170700 1609170700 0 100 0}]
+2020/12/17 10:02:58.219 [D] [value.go:460]  this is SecInfo!!!
+2020/12/17 10:02:58.219 [D] [skill.go:31]  get product[1027]， result[map[end:true product_id:1027 start:false status:sec kill is already end]], all[map[1:0xc00010f710 2:0xc00010f740 3:0xc00010f770 4:0xc00010f7a0 1027:0xc00010f6e0 1029:0xc00010f6b0]] v[&{1027 1505008800 1505012400 0 2000 1000}]
+2020/12/17 10:02:58.219 [D] [skill.go:31]  get product[3]， result[map[end:false product_id:3 start:true status:success]], all[map[1:0xc00010f710 2:0xc00010f740 3:0xc00010f770 4:0xc00010f7a0 1027:0xc00010f6e0 1029:0xc00010f6b0]] v[&{3 1608169920 1609169800 0 100 0}]
+2020/12/17 10:02:58.220 [D] [skill.go:31]  get product[2]， result[map[end:false product_id:2 start:false status:sec kill is not start]], all[map[1:0xc00010f710 2:0xc00010f740 3:0xc00010f770 4:0xc00010f7a0 1027:0xc00010f6e0 1029:0xc00010f6b0]] v[&{2 1608266320 1608599320 0 100 0}]
+2020/12/17 10:02:58.220 [D] [skill.go:31]  get product[1]， result[map[end:false product_id:1 start:false status:sec kill is not start]], all[map[1:0xc00010f710 2:0xc00010f740 3:0xc00010f770 4:0xc00010f7a0 1027:0xc00010f6e0 1029:0xc00010f6b0]] v[&{1 1608186520 1608199320 0 100 0}]
+2020/12/17 10:02:58.220 [D] [skill.go:31]  get product[1029]， result[map[end:true product_id:1029 start:false status:sec kill is already end]], all[map[1:0xc00010f710 2:0xc00010f740 3:0xc00010f770 4:0xc00010f7a0 1027:0xc00010f6e0 1029:0xc00010f6b0]] v[&{1029 1505008800 1505012400 0 1000 1000}]
+2020/12/17 10:02:58.220 [D] [skill.go:31]  get product[4]， result[map[end:false product_id:4 start:false status:sec kill is not start]], all[map[1:0xc00010f710 2:0xc00010f740 3:0xc00010f770 4:0xc00010f7a0 1027:0xc00010f6e0 1029:0xc00010f6b0]] v[&{4 1608170700 1609170700 0 100 0}]
+2020/12/17 10:02:58.221 [D] [server.go:2802]  |192.168.199.237|[97;42m 200 [0m|   2.009436ms|   match|[97;44m GET     [0m /secinfo   r:/secinfo
+2020/12/17 10:04:05.055 [D] [value.go:460]  ganyuefebg1111
+2020/12/17 10:04:05.055 [D] [value.go:460]  ClientAddr is 192.168.199.237
+2020/12/17 10:04:05.055 [D] [value.go:460]  111client request:[&{3     1  2020-12-17 10:04:05.055619525 +0800 CST m=+176.354063141 192.168.199.237  0xc00003c0e0 <nil>}]
+2020/12/17 10:04:05.055 [D] [skill.go:106]  this is service SecKill
+2020/12/17 10:04:05.055 [D] [service.go:153]  this is antiSpam
+2020/12/17 10:04:05.055 [D] [service.go:153]  22this is antiSpam
+2020/12/17 10:04:05.055 [D] [service.go:153]  this is antiSpam
+2020/12/17 10:04:05.055 [D] [service.go:153]  this is antiSpam
+2020/12/17 10:04:05.056 [C] [panic.go:679]  the request url is  /seckill
+2020/12/17 10:04:05.056 [C] [panic.go:679]  Handler crashed with error assignment to entry in nil map
+2020/12/17 10:04:05.056 [C] [panic.go:679]  /usr/lib/golang/src/runtime/panic.go:679
+2020/12/17 10:04:05.056 [C] [panic.go:679]  /usr/lib/golang/src/runtime/map_faststr.go:204
+2020/12/17 10:04:05.056 [C] [panic.go:679]  /home/ganyuefeng/process/seckill/seckill_proxy/service/service.go:172
+2020/12/17 10:04:05.056 [C] [panic.go:679]  /home/ganyuefeng/process/seckill/seckill_proxy/controller/skill.go:106
+2020/12/17 10:04:05.056 [C] [panic.go:679]  /usr/lib/golang/src/reflect/value.go:460
+2020/12/17 10:04:05.056 [C] [panic.go:679]  /usr/lib/golang/src/reflect/value.go:321
+2020/12/17 10:04:05.056 [C] [panic.go:679]  /root/goworkspace/pkg/mod/github.com/astaxie/beego@v1.12.3/router.go:897
+2020/12/17 10:04:05.056 [C] [panic.go:679]  /usr/lib/golang/src/net/http/server.go:2802
+2020/12/17 10:04:05.056 [C] [panic.go:679]  /usr/lib/golang/src/net/http/server.go:1890
+2020/12/17 10:04:05.056 [C] [panic.go:679]  /usr/lib/golang/src/runtime/asm_amd64.s:1357
+2020/12/17 10:04:05.057 [server.go:3054]  [HTTP] http: superfluous response.WriteHeader call from github.com/astaxie/beego/context.(*Response).WriteHeader (context.go:230)
+2020/12/17 10:10:49.215 [D] [init.go:298]  initredis start
+2020/12/17 10:10:49.227 [D] [init.go:298]  initRedis success!!
+2020/12/17 10:10:49.228 [D] [init.go:305]  initEtcd success
+2020/12/17 10:10:49.228 [D] [init.go:312]  key is /ganyuefeng/backend/secskill/product
+2020/12/17 10:10:49.245 [D] [init.go:312]  key is /ganyuefeng/backend/secskill/product
+2020/12/17 10:10:49.246 [D] [init.go:312]  key[0] valud[key:"/ganyuefeng/backend/secskill/product" create_revision:34 mod_revision:38 version:5 value:"[{\"ProductId\":1029,\"StartTime\":1505008800,\"EndTime\":1505012400,\"Status\":0,\"Total\":1000,\"Left\":1000,\"OnePersonBuyLimit\":0,\"BuyRate\":0,\"SoldMaxLimit\":0},{\"ProductId\":1027,\"StartTime\":1505008800,\"EndTime\":1505012400,\"Status\":0,\"Total\":2000,\"Left\":1000,\"OnePersonBuyLimit\":0,\"BuyRate\":0,\"SoldMaxLimit\":0},{\"ProductId\":1,\"StartTime\":1608186520,\"EndTime\":1608199320,\"Status\":0,\"Total\":100,\"Left\":0,\"OnePersonBuyLimit\":3,\"BuyRate\":10,\"SoldMaxLimit\":50},{\"ProductId\":2,\"StartTime\":1608266320,\"EndTime\":1608599320,\"Status\":0,\"Total\":100,\"Left\":0,\"OnePersonBuyLimit\":3,\"BuyRate\":3,\"SoldMaxLimit\":3},{\"ProductId\":3,\"StartTime\":1608169920,\"EndTime\":1609169800,\"Status\":0,\"Total\":100,\"Left\":0,\"OnePersonBuyLimit\":3,\"BuyRate\":3,\"SoldMaxLimit\":3},{\"ProductId\":4,\"StartTime\":1608170700,\"EndTime\":1609170700,\"Status\":0,\"Total\":100,\"Left\":0,\"OnePersonBuyLimit\":3,\"BuyRate\":10,\"SoldMaxLimit\":3}]" ]
+2020/12/17 10:10:49.246 [D] [init.go:312]  ganyuefeng info conf is [[{1029 1505008800 1505012400 0 1000 1000} {1027 1505008800 1505012400 0 2000 1000} {1 1608186520 1608199320 0 100 0} {2 1608266320 1608599320 0 100 0} {3 1608169920 1609169800 0 100 0} {4 1608170700 1609170700 0 100 0}]]
+2020/12/17 10:10:49.246 [D] [init.go:312]  loadSecConf success!
+2020/12/17 10:10:49.246 [D] [init.go:127]  initredis start
+2020/12/17 10:10:49.247 [D] [init.go:127]  initRedis success!!
+2020/12/17 10:10:49.248 [D] [init.go:318]  init service succ, config:&{{192.168.199.99:6379 64 0 30} { 0 0 0} { 0 0 0} {localhost:2379 5 /ganyuefeng/backend/secskill /ganyuefeng/backend/secskill/product} ./logs/sec.log debug map[1:0xc00003eff0 2:0xc00003f020 3:0xc00003f050 4:0xc00003f080 1027:0xc00003efc0 1029:0xc00003ef90] {{0 0} 0 0 0 0} tyP87zZKzITuzaUjhmbqhNIDnyg6f2KP [localhost baidu.com/seckill] map[] map[] {50 1 500 10} 0xc0002110a0 <nil> <nil> <nil> {{0 0} 0 0 0 0} 0 0 <nil> 0 map[] {0 0}}
+2020/12/17 10:10:49.249 [D] [init.go:33]  read config succ, redis addr:127.0.0.1:6379
+2020/12/17 10:10:49.249 [I] [main.go:17]  init sec success!
+2020/12/17 10:10:49.275 [D] [asm_amd64.s:1357]  begin watch key:/ganyuefeng/backend/secskill/product
+2020/12/17 10:10:49.338 [I] [asm_amd64.s:1357]  http server Running on http://192.168.199.99:9091
+2020/12/17 10:10:50.775 [D] [value.go:460]  ganyuefebg1111
+2020/12/17 10:10:50.775 [D] [value.go:460]  ClientAddr is 192.168.199.237
+2020/12/17 10:10:50.776 [D] [value.go:460]  111client request:[&{3     1  2020-12-17 10:10:50.775763026 +0800 CST m=+1.589181622 192.168.199.237  0xc00003c690 <nil>}]
+2020/12/17 10:10:50.776 [D] [skill.go:106]  this is service SecKill
+2020/12/17 10:10:50.776 [D] [service.go:153]  this is antiSpam
+2020/12/17 10:10:50.776 [D] [service.go:153]  22this is antiSpam
+2020/12/17 10:10:50.776 [D] [service.go:153]  this is antiSpam
+2020/12/17 10:10:50.776 [D] [service.go:153]  this is antiSpam
+2020/12/17 10:10:50.776 [C] [panic.go:679]  the request url is  /seckill
+2020/12/17 10:10:50.776 [C] [panic.go:679]  Handler crashed with error assignment to entry in nil map
+2020/12/17 10:10:50.776 [C] [panic.go:679]  /usr/lib/golang/src/runtime/panic.go:679
+2020/12/17 10:10:50.776 [C] [panic.go:679]  /usr/lib/golang/src/runtime/map_faststr.go:204
+2020/12/17 10:10:50.776 [C] [panic.go:679]  /home/ganyuefeng/process/seckill/seckill_proxy/service/service.go:172
+2020/12/17 10:10:50.777 [C] [panic.go:679]  /home/ganyuefeng/process/seckill/seckill_proxy/controller/skill.go:106
+2020/12/17 10:10:50.777 [C] [panic.go:679]  /usr/lib/golang/src/reflect/value.go:460
+2020/12/17 10:10:50.777 [C] [panic.go:679]  /usr/lib/golang/src/reflect/value.go:321
+2020/12/17 10:10:50.777 [C] [panic.go:679]  /root/goworkspace/pkg/mod/github.com/astaxie/beego@v1.12.3/router.go:897
+2020/12/17 10:10:50.777 [C] [panic.go:679]  /usr/lib/golang/src/net/http/server.go:2802
+2020/12/17 10:10:50.777 [C] [panic.go:679]  /usr/lib/golang/src/net/http/server.go:1890
+2020/12/17 10:10:50.777 [C] [panic.go:679]  /usr/lib/golang/src/runtime/asm_amd64.s:1357
+2020/12/17 10:10:50.779 [server.go:3054]  [HTTP] http: superfluous response.WriteHeader call from github.com/astaxie/beego/context.(*Response).WriteHeader (context.go:230)
+2020/12/17 10:16:40.490 [D] [init.go:298]  initredis start
+2020/12/17 10:16:40.490 [D] [init.go:298]  initRedis success!!
+2020/12/17 10:16:40.491 [D] [init.go:305]  initEtcd success
+2020/12/17 10:16:40.491 [D] [init.go:312]  key is /ganyuefeng/backend/secskill/product
+2020/12/17 10:16:40.521 [D] [init.go:312]  key is /ganyuefeng/backend/secskill/product
+2020/12/17 10:16:40.521 [D] [init.go:312]  key[0] valud[key:"/ganyuefeng/backend/secskill/product" create_revision:34 mod_revision:38 version:5 value:"[{\"ProductId\":1029,\"StartTime\":1505008800,\"EndTime\":1505012400,\"Status\":0,\"Total\":1000,\"Left\":1000,\"OnePersonBuyLimit\":0,\"BuyRate\":0,\"SoldMaxLimit\":0},{\"ProductId\":1027,\"StartTime\":1505008800,\"EndTime\":1505012400,\"Status\":0,\"Total\":2000,\"Left\":1000,\"OnePersonBuyLimit\":0,\"BuyRate\":0,\"SoldMaxLimit\":0},{\"ProductId\":1,\"StartTime\":1608186520,\"EndTime\":1608199320,\"Status\":0,\"Total\":100,\"Left\":0,\"OnePersonBuyLimit\":3,\"BuyRate\":10,\"SoldMaxLimit\":50},{\"ProductId\":2,\"StartTime\":1608266320,\"EndTime\":1608599320,\"Status\":0,\"Total\":100,\"Left\":0,\"OnePersonBuyLimit\":3,\"BuyRate\":3,\"SoldMaxLimit\":3},{\"ProductId\":3,\"StartTime\":1608169920,\"EndTime\":1609169800,\"Status\":0,\"Total\":100,\"Left\":0,\"OnePersonBuyLimit\":3,\"BuyRate\":3,\"SoldMaxLimit\":3},{\"ProductId\":4,\"StartTime\":1608170700,\"EndTime\":1609170700,\"Status\":0,\"Total\":100,\"Left\":0,\"OnePersonBuyLimit\":3,\"BuyRate\":10,\"SoldMaxLimit\":3}]" ]
+2020/12/17 10:16:40.522 [D] [init.go:312]  ganyuefeng info conf is [[{1029 1505008800 1505012400 0 1000 1000} {1027 1505008800 1505012400 0 2000 1000} {1 1608186520 1608199320 0 100 0} {2 1608266320 1608599320 0 100 0} {3 1608169920 1609169800 0 100 0} {4 1608170700 1609170700 0 100 0}]]
+2020/12/17 10:16:40.522 [D] [init.go:312]  loadSecConf success!
+2020/12/17 10:16:40.522 [D] [init.go:126]  initredis start
+2020/12/17 10:16:40.523 [D] [init.go:126]  initRedis success!!
+2020/12/17 10:16:40.524 [D] [init.go:318]  init service succ, config:&{{192.168.199.99:6379 64 0 30} { 0 0 0} { 0 0 0} {localhost:2379 5 /ganyuefeng/backend/secskill /ganyuefeng/backend/secskill/product} ./logs/sec.log debug map[1:0xc00003eff0 2:0xc00003f020 3:0xc00003f050 4:0xc00003f080 1027:0xc00003efc0 1029:0xc00003ef90] {{0 0} 0 0 0 0} tyP87zZKzITuzaUjhmbqhNIDnyg6f2KP [localhost baidu.com/seckill] map[] map[] {50 1 500 10} 0xc000213110 <nil> <nil> <nil> {{0 0} 0 0 0 0} 0 0 <nil> 0 map[] {0 0}}
+2020/12/17 10:16:40.525 [D] [init.go:32]  read config succ, redis addr:127.0.0.1:6379
+2020/12/17 10:16:40.525 [I] [main.go:17]  init sec success!
+2020/12/17 10:16:40.562 [D] [asm_amd64.s:1357]  begin watch key:/ganyuefeng/backend/secskill/product
+2020/12/17 10:16:40.592 [I] [asm_amd64.s:1357]  http server Running on http://192.168.199.99:9091
+2020/12/17 10:16:52.274 [D] [value.go:460]  ganyuefebg1111
+2020/12/17 10:16:52.274 [D] [value.go:460]  ClientAddr is 192.168.199.237
+2020/12/17 10:16:52.275 [D] [value.go:460]  111client request:[&{3     1  2020-12-17 10:16:52.274837909 +0800 CST m=+11.852720049 192.168.199.237  0xc00003c930 <nil>}]
+2020/12/17 10:16:52.275 [D] [skill.go:106]  this is service SecKill
+2020/12/17 10:16:52.275 [D] [service.go:153]  this is antiSpam
+2020/12/17 10:16:52.275 [D] [service.go:153]  22this is antiSpam
+2020/12/17 10:16:52.275 [D] [service.go:153]  this is antiSpam
+2020/12/17 10:16:52.275 [D] [service.go:153]  this is antiSpam
+2020/12/17 10:17:20.377 [D] [value.go:460]  this is SecInfo!!!
+2020/12/17 10:17:20.378 [D] [skill.go:31]  get product[3]， result[map[end:false product_id:3 start:true status:success]], all[map[1:0xc00003eff0 2:0xc00003f020 3:0xc00003f050 4:0xc00003f080 1027:0xc00003efc0 1029:0xc00003ef90]] v[&{3 1608169920 1609169800 0 100 0}]
+2020/12/17 10:17:20.378 [D] [skill.go:31]  get product[1029]， result[map[end:true product_id:1029 start:false status:sec kill is already end]], all[map[1:0xc00003eff0 2:0xc00003f020 3:0xc00003f050 4:0xc00003f080 1027:0xc00003efc0 1029:0xc00003ef90]] v[&{1029 1505008800 1505012400 0 1000 1000}]
+2020/12/17 10:17:20.378 [D] [skill.go:31]  get product[4]， result[map[end:false product_id:4 start:true status:success]], all[map[1:0xc00003eff0 2:0xc00003f020 3:0xc00003f050 4:0xc00003f080 1027:0xc00003efc0 1029:0xc00003ef90]] v[&{4 1608170700 1609170700 0 100 0}]
+2020/12/17 10:17:20.378 [D] [skill.go:31]  get product[2]， result[map[end:false product_id:2 start:false status:sec kill is not start]], all[map[1:0xc00003eff0 2:0xc00003f020 3:0xc00003f050 4:0xc00003f080 1027:0xc00003efc0 1029:0xc00003ef90]] v[&{2 1608266320 1608599320 0 100 0}]
+2020/12/17 10:17:20.378 [D] [skill.go:31]  get product[1027]， result[map[end:true product_id:1027 start:false status:sec kill is already end]], all[map[1:0xc00003eff0 2:0xc00003f020 3:0xc00003f050 4:0xc00003f080 1027:0xc00003efc0 1029:0xc00003ef90]] v[&{1027 1505008800 1505012400 0 2000 1000}]
+2020/12/17 10:17:20.378 [D] [skill.go:31]  get product[1]， result[map[end:false product_id:1 start:false status:sec kill is not start]], all[map[1:0xc00003eff0 2:0xc00003f020 3:0xc00003f050 4:0xc00003f080 1027:0xc00003efc0 1029:0xc00003ef90]] v[&{1 1608186520 1608199320 0 100 0}]
+2020/12/17 10:17:20.379 [D] [server.go:2802]  |192.168.199.237|[97;42m 200 [0m|   1.267374ms|   match|[97;44m GET     [0m /secinfo   r:/secinfo
+2020/12/17 10:17:22.690 [D] [value.go:460]  ganyuefebg1111
+2020/12/17 10:17:22.690 [D] [value.go:460]  ClientAddr is 192.168.199.237
+2020/12/17 10:17:22.690 [D] [value.go:460]  111client request:[&{3     1  2020-12-17 10:17:22.69026804 +0800 CST m=+42.268150026 192.168.199.237  0xc00003ce00 <nil>}]
+2020/12/17 10:17:22.690 [D] [skill.go:106]  this is service SecKill
+2020/12/17 10:17:22.690 [D] [service.go:153]  this is antiSpam
+2020/12/17 10:17:22.690 [D] [service.go:153]  22this is antiSpam
+2020/12/17 10:17:22.690 [D] [service.go:153]  this is antiSpam
+2020/12/17 10:17:22.690 [D] [service.go:153]  this is antiSpam
+2020/12/17 10:17:31.641 [D] [value.go:460]  ganyuefebg1111
+2020/12/17 10:17:31.641 [D] [value.go:460]  ClientAddr is 192.168.199.237
+2020/12/17 10:17:31.641 [D] [value.go:460]  111client request:[&{3     1  2020-12-17 10:17:31.641452147 +0800 CST m=+51.219334134 192.168.199.237  0xc00003cf50 <nil>}]
+2020/12/17 10:17:31.641 [D] [skill.go:106]  this is service SecKill
+2020/12/17 10:17:31.641 [D] [service.go:153]  this is antiSpam
+2020/12/17 10:17:31.641 [D] [service.go:153]  22this is antiSpam
+2020/12/17 10:17:31.641 [D] [service.go:153]  this is antiSpam
+2020/12/17 10:17:31.641 [D] [service.go:153]  this is antiSpam
+2020/12/17 10:17:46.257 [D] [value.go:460]  this is SecInfo!!!
+2020/12/17 10:17:46.258 [D] [skill.go:31]  get product[3]， result[map[end:false product_id:3 start:true status:success]], all[map[1:0xc00003eff0 2:0xc00003f020 3:0xc00003f050 4:0xc00003f080 1027:0xc00003efc0 1029:0xc00003ef90]] v[&{3 1608169920 1609169800 0 100 0}]
+2020/12/17 10:17:46.258 [D] [skill.go:31]  get product[1029]， result[map[end:true product_id:1029 start:false status:sec kill is already end]], all[map[1:0xc00003eff0 2:0xc00003f020 3:0xc00003f050 4:0xc00003f080 1027:0xc00003efc0 1029:0xc00003ef90]] v[&{1029 1505008800 1505012400 0 1000 1000}]
+2020/12/17 10:17:46.258 [D] [skill.go:31]  get product[4]， result[map[end:false product_id:4 start:true status:success]], all[map[1:0xc00003eff0 2:0xc00003f020 3:0xc00003f050 4:0xc00003f080 1027:0xc00003efc0 1029:0xc00003ef90]] v[&{4 1608170700 1609170700 0 100 0}]
+2020/12/17 10:17:46.259 [D] [skill.go:31]  get product[2]， result[map[end:false product_id:2 start:false status:sec kill is not start]], all[map[1:0xc00003eff0 2:0xc00003f020 3:0xc00003f050 4:0xc00003f080 1027:0xc00003efc0 1029:0xc00003ef90]] v[&{2 1608266320 1608599320 0 100 0}]
+2020/12/17 10:17:46.259 [D] [skill.go:31]  get product[1027]， result[map[end:true product_id:1027 start:false status:sec kill is already end]], all[map[1:0xc00003eff0 2:0xc00003f020 3:0xc00003f050 4:0xc00003f080 1027:0xc00003efc0 1029:0xc00003ef90]] v[&{1027 1505008800 1505012400 0 2000 1000}]
+2020/12/17 10:17:46.259 [D] [skill.go:31]  get product[1]， result[map[end:false product_id:1 start:false status:sec kill is not start]], all[map[1:0xc00003eff0 2:0xc00003f020 3:0xc00003f050 4:0xc00003f080 1027:0xc00003efc0 1029:0xc00003ef90]] v[&{1 1608186520 1608199320 0 100 0}]
+2020/12/17 10:17:46.259 [D] [server.go:2802]  |192.168.199.237|[97;42m 200 [0m|   2.159004ms|   match|[97;44m GET     [0m /secinfo   r:/secinfo
+2020/12/17 10:17:56.031 [D] [value.go:460]  ganyuefebg1111
+2020/12/17 10:17:56.031 [D] [value.go:460]  ClientAddr is 192.168.199.237
+2020/12/17 10:17:56.031 [D] [value.go:460]  111client request:[&{3     1  2020-12-17 10:17:56.031636399 +0800 CST m=+75.609518425 192.168.199.237  0xc00003d2d0 <nil>}]
+2020/12/17 10:17:56.031 [D] [skill.go:106]  this is service SecKill
+2020/12/17 10:17:56.031 [D] [service.go:153]  this is antiSpam
+2020/12/17 10:17:56.031 [D] [service.go:153]  22this is antiSpam
+2020/12/17 10:17:56.031 [D] [service.go:153]  this is antiSpam
+2020/12/17 10:17:56.031 [D] [service.go:153]  this is antiSpam
+2020/12/17 13:01:33.995 [D] [init.go:298]  initredis start
+2020/12/17 13:01:33.996 [D] [init.go:298]  initRedis success!!
+2020/12/17 13:01:33.996 [D] [init.go:305]  initEtcd success
+2020/12/17 13:01:33.996 [D] [init.go:312]  key is /ganyuefeng/backend/secskill/product
+2020/12/17 13:01:34.034 [D] [init.go:312]  key is /ganyuefeng/backend/secskill/product
+2020/12/17 13:01:34.034 [D] [init.go:312]  key[0] valud[key:"/ganyuefeng/backend/secskill/product" create_revision:34 mod_revision:38 version:5 value:"[{\"ProductId\":1029,\"StartTime\":1505008800,\"EndTime\":1505012400,\"Status\":0,\"Total\":1000,\"Left\":1000,\"OnePersonBuyLimit\":0,\"BuyRate\":0,\"SoldMaxLimit\":0},{\"ProductId\":1027,\"StartTime\":1505008800,\"EndTime\":1505012400,\"Status\":0,\"Total\":2000,\"Left\":1000,\"OnePersonBuyLimit\":0,\"BuyRate\":0,\"SoldMaxLimit\":0},{\"ProductId\":1,\"StartTime\":1608186520,\"EndTime\":1608199320,\"Status\":0,\"Total\":100,\"Left\":0,\"OnePersonBuyLimit\":3,\"BuyRate\":10,\"SoldMaxLimit\":50},{\"ProductId\":2,\"StartTime\":1608266320,\"EndTime\":1608599320,\"Status\":0,\"Total\":100,\"Left\":0,\"OnePersonBuyLimit\":3,\"BuyRate\":3,\"SoldMaxLimit\":3},{\"ProductId\":3,\"StartTime\":1608169920,\"EndTime\":1609169800,\"Status\":0,\"Total\":100,\"Left\":0,\"OnePersonBuyLimit\":3,\"BuyRate\":3,\"SoldMaxLimit\":3},{\"ProductId\":4,\"StartTime\":1608170700,\"EndTime\":1609170700,\"Status\":0,\"Total\":100,\"Left\":0,\"OnePersonBuyLimit\":3,\"BuyRate\":10,\"SoldMaxLimit\":3}]" ]
+2020/12/17 13:01:34.034 [D] [init.go:312]  ganyuefeng info conf is [[{1029 1505008800 1505012400 0 1000 1000} {1027 1505008800 1505012400 0 2000 1000} {1 1608186520 1608199320 0 100 0} {2 1608266320 1608599320 0 100 0} {3 1608169920 1609169800 0 100 0} {4 1608170700 1609170700 0 100 0}]]
+2020/12/17 13:01:34.034 [D] [init.go:312]  loadSecConf success!
+2020/12/17 13:01:34.034 [D] [init.go:126]  initredis start
+2020/12/17 13:01:34.036 [D] [init.go:126]  initRedis success!!
+2020/12/17 13:01:34.036 [D] [init.go:318]  init service succ, config:&{{192.168.199.99:6379 64 0 30} { 0 0 0} { 0 0 0} {localhost:2379 5 /ganyuefeng/backend/secskill /ganyuefeng/backend/secskill/product} ./logs/sec.log debug map[1:0xc00003eff0 2:0xc00003f020 3:0xc00003f050 4:0xc00003f080 1027:0xc00003efc0 1029:0xc00003ef90] {{0 0} 0 0 0 0} tyP87zZKzITuzaUjhmbqhNIDnyg6f2KP [localhost baidu.com/seckill] map[] map[] {50 1 500 10} 0xc000211260 <nil> <nil> <nil> {{0 0} 0 0 0 0} 0 0 <nil> 0 map[] {0 0}}
+2020/12/17 13:01:34.038 [D] [init.go:32]  read config succ, redis addr:127.0.0.1:6379
+2020/12/17 13:01:34.038 [I] [main.go:17]  init sec success!
+2020/12/17 13:01:34.075 [D] [asm_amd64.s:1357]  begin watch key:/ganyuefeng/backend/secskill/product
+2020/12/17 13:01:34.146 [I] [asm_amd64.s:1357]  http server Running on http://192.168.199.99:9091
+2020/12/17 13:01:39.939 [D] [value.go:460]  ganyuefebg1111
+2020/12/17 13:01:39.939 [D] [value.go:460]  ClientAddr is 192.168.199.237
+2020/12/17 13:01:39.940 [D] [value.go:460]  111client request:[&{3     1  2020-12-17 13:01:39.939830394 +0800 CST m=+5.986026895 192.168.199.237  0xc00003c850 <nil>}]
+2020/12/17 13:01:39.940 [D] [skill.go:106]  this is service SecKill
+2020/12/17 13:01:39.940 [D] [service.go:153]  this is antiSpam
+2020/12/17 13:01:39.940 [D] [service.go:153]  22this is antiSpam
+2020/12/17 13:01:39.940 [D] [service.go:153]  this is antiSpam
+2020/12/17 13:01:39.940 [D] [service.go:153]  this is antiSpam out
+2020/12/17 13:04:53.903 [D] [init.go:298]  initredis start
+2020/12/17 13:04:53.915 [D] [init.go:298]  initRedis success!!
+2020/12/17 13:04:53.915 [D] [init.go:305]  initEtcd success
+2020/12/17 13:04:53.915 [D] [init.go:312]  key is /ganyuefeng/backend/secskill/product
+2020/12/17 13:04:53.930 [D] [init.go:312]  key is /ganyuefeng/backend/secskill/product
+2020/12/17 13:04:53.931 [D] [init.go:312]  key[0] valud[key:"/ganyuefeng/backend/secskill/product" create_revision:34 mod_revision:38 version:5 value:"[{\"ProductId\":1029,\"StartTime\":1505008800,\"EndTime\":1505012400,\"Status\":0,\"Total\":1000,\"Left\":1000,\"OnePersonBuyLimit\":0,\"BuyRate\":0,\"SoldMaxLimit\":0},{\"ProductId\":1027,\"StartTime\":1505008800,\"EndTime\":1505012400,\"Status\":0,\"Total\":2000,\"Left\":1000,\"OnePersonBuyLimit\":0,\"BuyRate\":0,\"SoldMaxLimit\":0},{\"ProductId\":1,\"StartTime\":1608186520,\"EndTime\":1608199320,\"Status\":0,\"Total\":100,\"Left\":0,\"OnePersonBuyLimit\":3,\"BuyRate\":10,\"SoldMaxLimit\":50},{\"ProductId\":2,\"StartTime\":1608266320,\"EndTime\":1608599320,\"Status\":0,\"Total\":100,\"Left\":0,\"OnePersonBuyLimit\":3,\"BuyRate\":3,\"SoldMaxLimit\":3},{\"ProductId\":3,\"StartTime\":1608169920,\"EndTime\":1609169800,\"Status\":0,\"Total\":100,\"Left\":0,\"OnePersonBuyLimit\":3,\"BuyRate\":3,\"SoldMaxLimit\":3},{\"ProductId\":4,\"StartTime\":1608170700,\"EndTime\":1609170700,\"Status\":0,\"Total\":100,\"Left\":0,\"OnePersonBuyLimit\":3,\"BuyRate\":10,\"SoldMaxLimit\":3}]" ]
+2020/12/17 13:04:53.931 [D] [init.go:312]  ganyuefeng info conf is [[{1029 1505008800 1505012400 0 1000 1000} {1027 1505008800 1505012400 0 2000 1000} {1 1608186520 1608199320 0 100 0} {2 1608266320 1608599320 0 100 0} {3 1608169920 1609169800 0 100 0} {4 1608170700 1609170700 0 100 0}]]
+2020/12/17 13:04:53.931 [D] [init.go:312]  loadSecConf success!
+2020/12/17 13:04:53.931 [D] [init.go:126]  initredis start
+2020/12/17 13:04:53.932 [D] [init.go:126]  initRedis success!!
+2020/12/17 13:04:53.932 [D] [init.go:318]  init service succ, config:&{{192.168.199.99:6379 64 0 30} { 0 0 0} { 0 0 0} {localhost:2379 5 /ganyuefeng/backend/secskill /ganyuefeng/backend/secskill/product} ./logs/sec.log debug map[1:0xc00003eff0 2:0xc00003f020 3:0xc00003f050 4:0xc00003f080 1027:0xc00003efc0 1029:0xc00003ef90] {{0 0} 0 0 0 0} tyP87zZKzITuzaUjhmbqhNIDnyg6f2KP [localhost baidu.com/seckill] map[] map[] {50 1 500 10} 0xc000213180 <nil> <nil> <nil> {{0 0} 0 0 0 0} 0 0 <nil> 0 map[] {0 0}}
+2020/12/17 13:04:53.934 [D] [init.go:32]  read config succ, redis addr:127.0.0.1:6379
+2020/12/17 13:04:53.934 [I] [main.go:17]  init sec success!
+2020/12/17 13:04:53.960 [D] [asm_amd64.s:1357]  begin watch key:/ganyuefeng/backend/secskill/product
+2020/12/17 13:04:54.014 [I] [asm_amd64.s:1357]  http server Running on http://192.168.199.99:9091
+2020/12/17 13:05:01.810 [D] [value.go:460]  ganyuefebg1111
+2020/12/17 13:05:01.810 [D] [value.go:460]  ClientAddr is 192.168.199.237
+2020/12/17 13:05:01.810 [D] [value.go:460]  111client request:[&{3     1  2020-12-17 13:05:01.810489192 +0800 CST m=+7.935210660 192.168.199.237  0xc00003c850 <nil>}]
+2020/12/17 13:05:01.810 [D] [skill.go:106]  this is service SecKill
+2020/12/17 13:05:01.810 [D] [service.go:153]  this is antiSpam
+2020/12/17 13:05:01.811 [D] [service.go:153]  22this is antiSpam
+2020/12/17 13:05:01.811 [D] [service.go:153]  this is antiSpam
+2020/12/17 13:05:01.811 [D] [service.go:153]  this is antiSpam out
+2020/12/17 13:05:01.811 [D] [skill.go:106]  start SecInfoById
+2020/12/17 13:05:01.811 [D] [skill.go:106]  2222
+2020/12/17 13:05:10.776 [D] [value.go:460]  ganyuefebg1111
+2020/12/17 13:05:10.777 [D] [value.go:460]  ClientAddr is 192.168.199.237
+2020/12/17 13:05:10.777 [D] [value.go:460]  111client request:[&{3     1  2020-12-17 13:05:10.777147436 +0800 CST m=+16.901868893 192.168.199.237  0xc00003caf0 <nil>}]
+2020/12/17 13:05:10.777 [D] [skill.go:106]  this is service SecKill
+2020/12/17 13:05:10.777 [D] [service.go:153]  this is antiSpam
+2020/12/17 13:05:10.777 [D] [service.go:153]  22this is antiSpam
+2020/12/17 13:05:10.777 [D] [service.go:153]  this is antiSpam
+2020/12/17 13:05:10.777 [D] [service.go:153]  this is antiSpam out
+2020/12/17 13:05:10.777 [D] [skill.go:106]  start SecInfoById
+2020/12/17 13:05:10.777 [D] [skill.go:106]  2222
+2020/12/17 13:05:12.730 [D] [value.go:460]  ganyuefebg1111
+2020/12/17 13:05:12.730 [D] [value.go:460]  ClientAddr is 192.168.199.237
+2020/12/17 13:05:12.730 [D] [value.go:460]  111client request:[&{3     1  2020-12-17 13:05:12.730822877 +0800 CST m=+18.855544377 192.168.199.237  0xc00003cbd0 <nil>}]
+2020/12/17 13:05:12.731 [D] [skill.go:106]  this is service SecKill
+2020/12/17 13:05:12.731 [D] [service.go:153]  this is antiSpam
+2020/12/17 13:05:12.731 [D] [service.go:153]  22this is antiSpam
+2020/12/17 13:05:12.731 [D] [service.go:153]  this is antiSpam
+2020/12/17 13:05:12.731 [D] [service.go:153]  this is antiSpam out
+2020/12/17 13:05:12.731 [D] [skill.go:106]  start SecInfoById
+2020/12/17 13:05:12.731 [D] [skill.go:106]  2222
+2020/12/17 13:05:14.743 [D] [value.go:460]  ganyuefebg1111
+2020/12/17 13:05:14.743 [D] [value.go:460]  ClientAddr is 192.168.199.237
+2020/12/17 13:05:14.743 [D] [value.go:460]  111client request:[&{3     1  2020-12-17 13:05:14.743631146 +0800 CST m=+20.868352496 192.168.199.237  0xc00003ccb0 <nil>}]
+2020/12/17 13:05:14.743 [D] [skill.go:106]  this is service SecKill
+2020/12/17 13:05:14.743 [D] [service.go:153]  this is antiSpam
+2020/12/17 13:05:14.743 [D] [service.go:153]  22this is antiSpam
+2020/12/17 13:05:14.743 [D] [service.go:153]  this is antiSpam
+2020/12/17 13:05:14.743 [D] [service.go:153]  this is antiSpam out
+2020/12/17 13:05:14.743 [D] [skill.go:106]  start SecInfoById
+2020/12/17 13:05:14.743 [D] [skill.go:106]  2222
+2020/12/17 13:05:30.492 [D] [value.go:460]  ganyuefebg1111
+2020/12/17 13:05:30.492 [D] [value.go:460]  ClientAddr is 192.168.199.237
+2020/12/17 13:05:30.493 [D] [value.go:460]  111client request:[&{3     1  2020-12-17 13:05:30.492946325 +0800 CST m=+36.617667676 192.168.199.237  0xc00003ce70 <nil>}]
+2020/12/17 13:05:30.493 [D] [skill.go:106]  this is service SecKill
+2020/12/17 13:05:30.493 [D] [service.go:153]  this is antiSpam
+2020/12/17 13:05:30.493 [D] [service.go:153]  22this is antiSpam
+2020/12/17 13:05:30.493 [D] [service.go:153]  this is antiSpam
+2020/12/17 13:05:30.493 [D] [service.go:153]  this is antiSpam out
+2020/12/17 13:05:30.493 [D] [skill.go:106]  start SecInfoById
+2020/12/17 13:05:30.493 [D] [skill.go:106]  2222
+2020/12/17 13:07:54.575 [D] [init.go:298]  initredis start
+2020/12/17 13:07:54.597 [D] [init.go:298]  initRedis success!!
+2020/12/17 13:07:54.598 [D] [init.go:305]  initEtcd success
+2020/12/17 13:07:54.598 [D] [init.go:312]  key is /ganyuefeng/backend/secskill/product
+2020/12/17 13:07:54.613 [D] [init.go:312]  key is /ganyuefeng/backend/secskill/product
+2020/12/17 13:07:54.613 [D] [init.go:312]  key[0] valud[key:"/ganyuefeng/backend/secskill/product" create_revision:34 mod_revision:38 version:5 value:"[{\"ProductId\":1029,\"StartTime\":1505008800,\"EndTime\":1505012400,\"Status\":0,\"Total\":1000,\"Left\":1000,\"OnePersonBuyLimit\":0,\"BuyRate\":0,\"SoldMaxLimit\":0},{\"ProductId\":1027,\"StartTime\":1505008800,\"EndTime\":1505012400,\"Status\":0,\"Total\":2000,\"Left\":1000,\"OnePersonBuyLimit\":0,\"BuyRate\":0,\"SoldMaxLimit\":0},{\"ProductId\":1,\"StartTime\":1608186520,\"EndTime\":1608199320,\"Status\":0,\"Total\":100,\"Left\":0,\"OnePersonBuyLimit\":3,\"BuyRate\":10,\"SoldMaxLimit\":50},{\"ProductId\":2,\"StartTime\":1608266320,\"EndTime\":1608599320,\"Status\":0,\"Total\":100,\"Left\":0,\"OnePersonBuyLimit\":3,\"BuyRate\":3,\"SoldMaxLimit\":3},{\"ProductId\":3,\"StartTime\":1608169920,\"EndTime\":1609169800,\"Status\":0,\"Total\":100,\"Left\":0,\"OnePersonBuyLimit\":3,\"BuyRate\":3,\"SoldMaxLimit\":3},{\"ProductId\":4,\"StartTime\":1608170700,\"EndTime\":1609170700,\"Status\":0,\"Total\":100,\"Left\":0,\"OnePersonBuyLimit\":3,\"BuyRate\":10,\"SoldMaxLimit\":3}]" ]
+2020/12/17 13:07:54.614 [D] [init.go:312]  ganyuefeng info conf is [[{1029 1505008800 1505012400 0 1000 1000} {1027 1505008800 1505012400 0 2000 1000} {1 1608186520 1608199320 0 100 0} {2 1608266320 1608599320 0 100 0} {3 1608169920 1609169800 0 100 0} {4 1608170700 1609170700 0 100 0}]]
+2020/12/17 13:07:54.614 [D] [init.go:312]  loadSecConf success!
+2020/12/17 13:07:54.614 [D] [init.go:127]  initredis start
+2020/12/17 13:07:54.615 [D] [init.go:127]  initRedis success!!
+2020/12/17 13:07:54.615 [D] [init.go:318]  init service succ, config:&{{192.168.199.99:6379 64 0 30} { 0 0 0} { 0 0 0} {localhost:2379 5 /ganyuefeng/backend/secskill /ganyuefeng/backend/secskill/product} ./logs/sec.log debug map[1:0xc00003eff0 2:0xc00003f020 3:0xc00003f050 4:0xc00003f080 1027:0xc00003efc0 1029:0xc00003ef90] {{0 0} 0 0 0 0} tyP87zZKzITuzaUjhmbqhNIDnyg6f2KP [localhost baidu.com/seckill] map[] map[] {50 1 500 10} 0xc000211110 <nil> <nil> <nil> {{0 0} 0 0 0 0} 0 0 <nil> 0 map[] {0 0}}
+2020/12/17 13:07:54.625 [D] [init.go:32]  read config succ, redis addr:127.0.0.1:6379
+2020/12/17 13:07:54.625 [I] [main.go:17]  init sec success!
+2020/12/17 13:07:54.652 [D] [asm_amd64.s:1357]  begin watch key:/ganyuefeng/backend/secskill/product
+2020/12/17 13:07:54.693 [I] [asm_amd64.s:1357]  http server Running on http://192.168.199.99:9091
+2020/12/17 13:08:15.178 [D] [value.go:460]  ganyuefebg1111
+2020/12/17 13:08:15.179 [D] [value.go:460]  ClientAddr is 192.168.199.237
+2020/12/17 13:08:15.179 [D] [value.go:460]  111client request:[&{3     1  2020-12-17 13:08:15.17911893 +0800 CST m=+20.660361252 192.168.199.237  0xc00003ca10 <nil>}]
+2020/12/17 13:08:15.179 [D] [skill.go:106]  this is service SecKill
+2020/12/17 13:08:15.179 [D] [service.go:153]  this is antiSpam
+2020/12/17 13:08:15.179 [D] [service.go:153]  22this is antiSpam
+2020/12/17 13:08:15.179 [D] [service.go:153]  this is antiSpam
+2020/12/17 13:08:15.179 [D] [service.go:153]  this is antiSpam out
+2020/12/17 13:08:15.179 [D] [skill.go:106]  start SecInfoById
+2020/12/17 13:08:15.179 [D] [skill.go:106]  2222
+2020/12/17 13:08:22.760 [D] [value.go:460]  this is SecInfo!!!
+2020/12/17 13:08:22.760 [D] [skill.go:31]  get product[2]， result[map[end:false product_id:2 start:false status:sec kill is not start]], all[map[1:0xc00003eff0 2:0xc00003f020 3:0xc00003f050 4:0xc00003f080 1027:0xc00003efc0 1029:0xc00003ef90]] v[&{2 1608266320 1608599320 0 100 0}]
+2020/12/17 13:08:22.761 [D] [skill.go:31]  get product[1]， result[map[end:false product_id:1 start:false status:sec kill is not start]], all[map[1:0xc00003eff0 2:0xc00003f020 3:0xc00003f050 4:0xc00003f080 1027:0xc00003efc0 1029:0xc00003ef90]] v[&{1 1608186520 1608199320 0 100 0}]
+2020/12/17 13:08:22.761 [D] [skill.go:31]  get product[4]， result[map[end:false product_id:4 start:true status:success]], all[map[1:0xc00003eff0 2:0xc00003f020 3:0xc00003f050 4:0xc00003f080 1027:0xc00003efc0 1029:0xc00003ef90]] v[&{4 1608170700 1609170700 0 100 0}]
+2020/12/17 13:08:22.761 [D] [skill.go:31]  get product[1029]， result[map[end:true product_id:1029 start:false status:sec kill is already end]], all[map[1:0xc00003eff0 2:0xc00003f020 3:0xc00003f050 4:0xc00003f080 1027:0xc00003efc0 1029:0xc00003ef90]] v[&{1029 1505008800 1505012400 0 1000 1000}]
+2020/12/17 13:08:22.761 [D] [skill.go:31]  get product[1027]， result[map[end:true product_id:1027 start:false status:sec kill is already end]], all[map[1:0xc00003eff0 2:0xc00003f020 3:0xc00003f050 4:0xc00003f080 1027:0xc00003efc0 1029:0xc00003ef90]] v[&{1027 1505008800 1505012400 0 2000 1000}]
+2020/12/17 13:08:22.761 [D] [skill.go:31]  get product[3]， result[map[end:false product_id:3 start:true status:success]], all[map[1:0xc00003eff0 2:0xc00003f020 3:0xc00003f050 4:0xc00003f080 1027:0xc00003efc0 1029:0xc00003ef90]] v[&{3 1608169920 1609169800 0 100 0}]
+2020/12/17 13:08:22.761 [D] [server.go:2802]  |192.168.199.237|[97;42m 200 [0m|   1.344996ms|   match|[97;44m GET     [0m /secinfo   r:/secinfo
+2020/12/17 13:08:31.782 [D] [value.go:460]  ganyuefebg1111
+2020/12/17 13:08:31.782 [D] [value.go:460]  ClientAddr is 192.168.199.237
+2020/12/17 13:08:31.782 [D] [value.go:460]  111client request:[&{3     1  2020-12-17 13:08:31.78244014 +0800 CST m=+37.263682460 192.168.199.237  0xc00003cd90 <nil>}]
+2020/12/17 13:08:31.782 [D] [skill.go:106]  this is service SecKill
+2020/12/17 13:08:31.782 [D] [service.go:153]  this is antiSpam
+2020/12/17 13:08:31.782 [D] [service.go:153]  22this is antiSpam
+2020/12/17 13:08:31.782 [D] [service.go:153]  this is antiSpam
+2020/12/17 13:08:31.782 [D] [service.go:153]  this is antiSpam out
+2020/12/17 13:08:31.782 [D] [skill.go:106]  start SecInfoById
+2020/12/17 13:08:31.782 [D] [skill.go:106]  2222
+2020/12/17 13:10:06.666 [D] [init.go:298]  initredis start
+2020/12/17 13:10:06.677 [D] [init.go:298]  initRedis success!!
+2020/12/17 13:10:06.677 [D] [init.go:305]  initEtcd success
+2020/12/17 13:10:06.677 [D] [init.go:312]  key is /ganyuefeng/backend/secskill/product
+2020/12/17 13:10:06.690 [D] [init.go:312]  key is /ganyuefeng/backend/secskill/product
+2020/12/17 13:10:06.690 [D] [init.go:312]  key[0] valud[key:"/ganyuefeng/backend/secskill/product" create_revision:34 mod_revision:38 version:5 value:"[{\"ProductId\":1029,\"StartTime\":1505008800,\"EndTime\":1505012400,\"Status\":0,\"Total\":1000,\"Left\":1000,\"OnePersonBuyLimit\":0,\"BuyRate\":0,\"SoldMaxLimit\":0},{\"ProductId\":1027,\"StartTime\":1505008800,\"EndTime\":1505012400,\"Status\":0,\"Total\":2000,\"Left\":1000,\"OnePersonBuyLimit\":0,\"BuyRate\":0,\"SoldMaxLimit\":0},{\"ProductId\":1,\"StartTime\":1608186520,\"EndTime\":1608199320,\"Status\":0,\"Total\":100,\"Left\":0,\"OnePersonBuyLimit\":3,\"BuyRate\":10,\"SoldMaxLimit\":50},{\"ProductId\":2,\"StartTime\":1608266320,\"EndTime\":1608599320,\"Status\":0,\"Total\":100,\"Left\":0,\"OnePersonBuyLimit\":3,\"BuyRate\":3,\"SoldMaxLimit\":3},{\"ProductId\":3,\"StartTime\":1608169920,\"EndTime\":1609169800,\"Status\":0,\"Total\":100,\"Left\":0,\"OnePersonBuyLimit\":3,\"BuyRate\":3,\"SoldMaxLimit\":3},{\"ProductId\":4,\"StartTime\":1608170700,\"EndTime\":1609170700,\"Status\":0,\"Total\":100,\"Left\":0,\"OnePersonBuyLimit\":3,\"BuyRate\":10,\"SoldMaxLimit\":3}]" ]
+2020/12/17 13:10:06.691 [D] [init.go:312]  ganyuefeng info conf is [[{1029 1505008800 1505012400 0 1000 1000} {1027 1505008800 1505012400 0 2000 1000} {1 1608186520 1608199320 0 100 0} {2 1608266320 1608599320 0 100 0} {3 1608169920 1609169800 0 100 0} {4 1608170700 1609170700 0 100 0}]]
+2020/12/17 13:10:06.691 [D] [init.go:312]  loadSecConf success!
+2020/12/17 13:10:06.691 [D] [init.go:128]  initredis start
+2020/12/17 13:10:06.691 [D] [init.go:128]  initRedis success!!
+2020/12/17 13:10:06.692 [D] [init.go:318]  init service succ, config:&{{192.168.199.99:6379 64 0 30} { 0 0 0} { 0 0 0} {localhost:2379 5 /ganyuefeng/backend/secskill /ganyuefeng/backend/secskill/product} ./logs/sec.log debug map[1:0xc00003eff0 2:0xc00003f020 3:0xc00003f050 4:0xc00003f080 1027:0xc00003efc0 1029:0xc00003ef90] {{0 0} 0 0 0 0} tyP87zZKzITuzaUjhmbqhNIDnyg6f2KP [localhost baidu.com/seckill] map[] map[] {50 1 500 10} 0xc000213110 <nil> <nil> <nil> {{0 0} 0 0 0 0} 0 0 <nil> 0 map[] {0 0}}
+2020/12/17 13:10:06.692 [I] [init.go:30]  111111
+2020/12/17 13:10:06.692 [D] [init.go:32]  read config succ, redis addr:127.0.0.1:6379
+2020/12/17 13:10:06.692 [I] [main.go:17]  init sec success!
+2020/12/17 13:10:06.713 [D] [asm_amd64.s:1357]  begin watch key:/ganyuefeng/backend/secskill/product
+2020/12/17 13:10:06.715 [I] [asm_amd64.s:1357]  http server Running on http://192.168.199.99:9091
+2020/12/17 13:10:26.715 [D] [value.go:460]  ganyuefebg1111
+2020/12/17 13:10:26.715 [D] [value.go:460]  ClientAddr is 192.168.199.237
+2020/12/17 13:10:26.715 [D] [value.go:460]  111client request:[&{3     1  2020-12-17 13:10:26.715565574 +0800 CST m=+20.072444808 192.168.199.237  0xc00003ca10 <nil>}]
+2020/12/17 13:10:26.715 [D] [skill.go:106]  this is service SecKill
+2020/12/17 13:10:26.715 [D] [service.go:153]  this is antiSpam
+2020/12/17 13:10:26.715 [D] [service.go:153]  22this is antiSpam
+2020/12/17 13:10:26.715 [D] [service.go:153]  this is antiSpam
+2020/12/17 13:10:26.716 [D] [service.go:153]  this is antiSpam out
+2020/12/17 13:10:26.716 [D] [skill.go:106]  start SecInfoById
+2020/12/17 13:10:26.716 [D] [skill.go:106]  2222
+2020/12/17 13:10:59.040 [D] [init.go:298]  initredis start
+2020/12/17 13:10:59.041 [D] [init.go:298]  initRedis success!!
+2020/12/17 13:10:59.041 [D] [init.go:305]  initEtcd success
+2020/12/17 13:10:59.041 [D] [init.go:312]  key is /ganyuefeng/backend/secskill/product
+2020/12/17 13:10:59.067 [D] [init.go:312]  key is /ganyuefeng/backend/secskill/product
+2020/12/17 13:10:59.068 [D] [init.go:312]  key[0] valud[key:"/ganyuefeng/backend/secskill/product" create_revision:34 mod_revision:38 version:5 value:"[{\"ProductId\":1029,\"StartTime\":1505008800,\"EndTime\":1505012400,\"Status\":0,\"Total\":1000,\"Left\":1000,\"OnePersonBuyLimit\":0,\"BuyRate\":0,\"SoldMaxLimit\":0},{\"ProductId\":1027,\"StartTime\":1505008800,\"EndTime\":1505012400,\"Status\":0,\"Total\":2000,\"Left\":1000,\"OnePersonBuyLimit\":0,\"BuyRate\":0,\"SoldMaxLimit\":0},{\"ProductId\":1,\"StartTime\":1608186520,\"EndTime\":1608199320,\"Status\":0,\"Total\":100,\"Left\":0,\"OnePersonBuyLimit\":3,\"BuyRate\":10,\"SoldMaxLimit\":50},{\"ProductId\":2,\"StartTime\":1608266320,\"EndTime\":1608599320,\"Status\":0,\"Total\":100,\"Left\":0,\"OnePersonBuyLimit\":3,\"BuyRate\":3,\"SoldMaxLimit\":3},{\"ProductId\":3,\"StartTime\":1608169920,\"EndTime\":1609169800,\"Status\":0,\"Total\":100,\"Left\":0,\"OnePersonBuyLimit\":3,\"BuyRate\":3,\"SoldMaxLimit\":3},{\"ProductId\":4,\"StartTime\":1608170700,\"EndTime\":1609170700,\"Status\":0,\"Total\":100,\"Left\":0,\"OnePersonBuyLimit\":3,\"BuyRate\":10,\"SoldMaxLimit\":3}]" ]
+2020/12/17 13:10:59.068 [D] [init.go:312]  ganyuefeng info conf is [[{1029 1505008800 1505012400 0 1000 1000} {1027 1505008800 1505012400 0 2000 1000} {1 1608186520 1608199320 0 100 0} {2 1608266320 1608599320 0 100 0} {3 1608169920 1609169800 0 100 0} {4 1608170700 1609170700 0 100 0}]]
+2020/12/17 13:10:59.068 [D] [init.go:312]  loadSecConf success!
+2020/12/17 13:10:59.068 [D] [init.go:128]  initredis start
+2020/12/17 13:10:59.069 [D] [init.go:128]  initRedis success!!
+2020/12/17 13:10:59.070 [D] [init.go:318]  init service succ, config:&{{192.168.199.99:6379 64 0 30} { 0 0 0} { 0 0 0} {localhost:2379 5 /ganyuefeng/backend/secskill /ganyuefeng/backend/secskill/product} ./logs/sec.log debug map[1:0xc00003eff0 2:0xc00003f020 3:0xc00003f050 4:0xc00003f080 1027:0xc00003efc0 1029:0xc00003ef90] {{0 0} 0 0 0 0} tyP87zZKzITuzaUjhmbqhNIDnyg6f2KP [localhost baidu.com/seckill] map[] map[] {50 1 500 10} 0xc000213180 <nil> <nil> <nil> {{0 0} 0 0 0 0} 0 0 <nil> 0 map[] {0 0}}
+2020/12/17 13:10:59.071 [I] [init.go:30]  111111
+2020/12/17 13:10:59.071 [D] [init.go:32]  read config succ, redis addr:127.0.0.1:6379
+2020/12/17 13:10:59.071 [I] [main.go:17]  init sec success!
+2020/12/17 13:10:59.107 [D] [asm_amd64.s:1357]  begin watch key:/ganyuefeng/backend/secskill/product
+2020/12/17 13:10:59.153 [I] [asm_amd64.s:1357]  http server Running on http://192.168.199.99:9091
+2020/12/17 13:11:39.423 [D] [value.go:460]  ganyuefebg1111
+2020/12/17 13:11:39.423 [D] [value.go:460]  ClientAddr is 192.168.199.237
+2020/12/17 13:11:39.423 [D] [value.go:460]  111client request:[&{3     1  2020-12-17 13:11:39.423501831 +0800 CST m=+40.488567654 192.168.199.237  0xc00003caf0 <nil>}]
+2020/12/17 13:11:39.423 [D] [skill.go:106]  this is service SecKill
+2020/12/17 13:11:39.423 [D] [service.go:153]  this is antiSpam
+2020/12/17 13:11:39.423 [D] [service.go:153]  22this is antiSpam
+2020/12/17 13:11:39.423 [D] [service.go:153]  this is antiSpam
+2020/12/17 13:11:39.423 [D] [service.go:153]  this is antiSpam out
+2020/12/17 13:11:39.423 [D] [skill.go:106]  start SecInfoById
+2020/12/17 13:11:39.423 [D] [skill.go:106]  2222
+2020/12/17 13:12:02.930 [D] [init.go:298]  initredis start
+2020/12/17 13:12:02.931 [D] [init.go:298]  initRedis success!!
+2020/12/17 13:12:02.931 [D] [init.go:305]  initEtcd success
+2020/12/17 13:12:02.931 [D] [init.go:312]  key is /ganyuefeng/backend/secskill/product
+2020/12/17 13:12:02.954 [D] [init.go:312]  key is /ganyuefeng/backend/secskill/product
+2020/12/17 13:12:02.955 [D] [init.go:312]  key[0] valud[key:"/ganyuefeng/backend/secskill/product" create_revision:34 mod_revision:38 version:5 value:"[{\"ProductId\":1029,\"StartTime\":1505008800,\"EndTime\":1505012400,\"Status\":0,\"Total\":1000,\"Left\":1000,\"OnePersonBuyLimit\":0,\"BuyRate\":0,\"SoldMaxLimit\":0},{\"ProductId\":1027,\"StartTime\":1505008800,\"EndTime\":1505012400,\"Status\":0,\"Total\":2000,\"Left\":1000,\"OnePersonBuyLimit\":0,\"BuyRate\":0,\"SoldMaxLimit\":0},{\"ProductId\":1,\"StartTime\":1608186520,\"EndTime\":1608199320,\"Status\":0,\"Total\":100,\"Left\":0,\"OnePersonBuyLimit\":3,\"BuyRate\":10,\"SoldMaxLimit\":50},{\"ProductId\":2,\"StartTime\":1608266320,\"EndTime\":1608599320,\"Status\":0,\"Total\":100,\"Left\":0,\"OnePersonBuyLimit\":3,\"BuyRate\":3,\"SoldMaxLimit\":3},{\"ProductId\":3,\"StartTime\":1608169920,\"EndTime\":1609169800,\"Status\":0,\"Total\":100,\"Left\":0,\"OnePersonBuyLimit\":3,\"BuyRate\":3,\"SoldMaxLimit\":3},{\"ProductId\":4,\"StartTime\":1608170700,\"EndTime\":1609170700,\"Status\":0,\"Total\":100,\"Left\":0,\"OnePersonBuyLimit\":3,\"BuyRate\":10,\"SoldMaxLimit\":3}]" ]
+2020/12/17 13:12:02.955 [D] [init.go:312]  ganyuefeng info conf is [[{1029 1505008800 1505012400 0 1000 1000} {1027 1505008800 1505012400 0 2000 1000} {1 1608186520 1608199320 0 100 0} {2 1608266320 1608599320 0 100 0} {3 1608169920 1609169800 0 100 0} {4 1608170700 1609170700 0 100 0}]]
+2020/12/17 13:12:02.955 [D] [init.go:312]  loadSecConf success!
+2020/12/17 13:12:02.955 [D] [init.go:128]  initredis start
+2020/12/17 13:12:02.956 [D] [init.go:128]  initRedis success!!
+2020/12/17 13:12:02.956 [D] [init.go:318]  init service succ, config:&{{192.168.199.99:6379 64 0 30} { 0 0 0} { 0 0 0} {localhost:2379 5 /ganyuefeng/backend/secskill /ganyuefeng/backend/secskill/product} ./logs/sec.log debug map[1:0xc00003eff0 2:0xc00003f020 3:0xc00003f050 4:0xc00003f080 1027:0xc00003efc0 1029:0xc00003ef90] {{0 0} 0 0 0 0} tyP87zZKzITuzaUjhmbqhNIDnyg6f2KP [localhost baidu.com/seckill] map[] map[] {50 1 500 10} 0xc0002110a0 <nil> <nil> <nil> {{0 0} 0 0 0 0} 0 0 <nil> 0 map[] {0 0}}
+2020/12/17 13:12:02.958 [I] [init.go:30]  111111: 0
+2020/12/17 13:12:02.958 [D] [init.go:32]  read config succ, redis addr:127.0.0.1:6379
+2020/12/17 13:12:02.958 [I] [main.go:17]  init sec success!
+2020/12/17 13:12:02.984 [D] [asm_amd64.s:1357]  begin watch key:/ganyuefeng/backend/secskill/product
+2020/12/17 13:12:03.025 [I] [asm_amd64.s:1357]  http server Running on http://192.168.199.99:9091
+2020/12/17 13:16:42.108 [D] [value.go:460]  ganyuefebg1111
+2020/12/17 13:16:42.109 [D] [value.go:460]  ClientAddr is 192.168.199.237
+2020/12/17 13:16:42.109 [D] [value.go:460]  111client request:[&{3     1  2020-12-17 13:16:42.108996831 +0800 CST m=+279.240109695 192.168.199.237  0xc00003c310 <nil>}]
+2020/12/17 13:16:42.109 [D] [skill.go:106]  this is service SecKill
+2020/12/17 13:16:42.109 [D] [service.go:153]  this is antiSpam
+2020/12/17 13:16:42.109 [D] [service.go:153]  22this is antiSpam
+2020/12/17 13:16:42.109 [D] [service.go:153]  this is antiSpam
+2020/12/17 13:16:42.109 [D] [service.go:153]  this is antiSpam out
+2020/12/17 13:16:42.109 [D] [skill.go:106]  start SecInfoById
+2020/12/17 13:16:42.109 [D] [skill.go:106]  2222
+2020/12/17 14:03:24.729 [D] [init.go:379]  initredis start
+2020/12/17 14:03:24.729 [D] [init.go:379]  initRedis success!!
+2020/12/17 14:03:24.730 [D] [init.go:386]  initEtcd success
+2020/12/17 14:03:24.730 [D] [init.go:393]  key is /ganyuefeng/backend/secskill/product
+2020/12/17 14:03:24.745 [D] [init.go:393]  key is /ganyuefeng/backend/secskill/product
+2020/12/17 14:03:24.745 [D] [init.go:393]  key[0] valud[key:"/ganyuefeng/backend/secskill/product" create_revision:34 mod_revision:38 version:5 value:"[{\"ProductId\":1029,\"StartTime\":1505008800,\"EndTime\":1505012400,\"Status\":0,\"Total\":1000,\"Left\":1000,\"OnePersonBuyLimit\":0,\"BuyRate\":0,\"SoldMaxLimit\":0},{\"ProductId\":1027,\"StartTime\":1505008800,\"EndTime\":1505012400,\"Status\":0,\"Total\":2000,\"Left\":1000,\"OnePersonBuyLimit\":0,\"BuyRate\":0,\"SoldMaxLimit\":0},{\"ProductId\":1,\"StartTime\":1608186520,\"EndTime\":1608199320,\"Status\":0,\"Total\":100,\"Left\":0,\"OnePersonBuyLimit\":3,\"BuyRate\":10,\"SoldMaxLimit\":50},{\"ProductId\":2,\"StartTime\":1608266320,\"EndTime\":1608599320,\"Status\":0,\"Total\":100,\"Left\":0,\"OnePersonBuyLimit\":3,\"BuyRate\":3,\"SoldMaxLimit\":3},{\"ProductId\":3,\"StartTime\":1608169920,\"EndTime\":1609169800,\"Status\":0,\"Total\":100,\"Left\":0,\"OnePersonBuyLimit\":3,\"BuyRate\":3,\"SoldMaxLimit\":3},{\"ProductId\":4,\"StartTime\":1608170700,\"EndTime\":1609170700,\"Status\":0,\"Total\":100,\"Left\":0,\"OnePersonBuyLimit\":3,\"BuyRate\":10,\"SoldMaxLimit\":3}]" ]
+2020/12/17 14:03:24.745 [D] [init.go:393]  ganyuefeng info conf is [[{1029 1505008800 1505012400 0 1000 1000} {1027 1505008800 1505012400 0 2000 1000} {1 1608186520 1608199320 0 100 0} {2 1608266320 1608599320 0 100 0} {3 1608169920 1609169800 0 100 0} {4 1608170700 1609170700 0 100 0}]]
+2020/12/17 14:03:24.745 [D] [init.go:393]  loadSecConf success!
+2020/12/17 14:03:24.746 [D] [init.go:98]  initredis start
+2020/12/17 14:03:24.746 [D] [init.go:98]  initRedis success!!
+2020/12/17 14:03:24.747 [D] [init.go:399]  init service succ, config:&{{192.168.199.99:6379 64 0 30} {127.0.0.1:6379 8 64 300} { 8 64 300} {localhost:2379 5 /ganyuefeng/backend/secskill /ganyuefeng/backend/secskill/product} ./logs/sec.log debug map[1:0xc00003f110 2:0xc00003f140 3:0xc00003f170 4:0xc00003f1a0 1027:0xc00003f0e0 1029:0xc00003f0b0] {{0 0} 0 0 0 0} tyP87zZKzITuzaUjhmbqhNIDnyg6f2KP [localhost baidu.com/seckill] map[] map[] {50 1 500 10} 0xc000213110 0xc000213180 <nil> <nil> {{0 0} 0 0 0 0} 16 16 <nil> 0 map[] {0 0}}
+2020/12/17 14:03:24.749 [I] [init.go:35]  111111: 16
+2020/12/17 14:03:24.749 [I] [init.go:35]  2222
+2020/12/17 14:03:24.749 [I] [init.go:35]  2222
+2020/12/17 14:03:24.749 [I] [init.go:35]  2222
+2020/12/17 14:03:24.749 [I] [init.go:35]  2222
+2020/12/17 14:03:24.749 [I] [init.go:35]  2222
+2020/12/17 14:03:24.749 [I] [init.go:35]  2222
+2020/12/17 14:03:24.749 [I] [init.go:35]  2222
+2020/12/17 14:03:24.749 [I] [init.go:35]  2222
+2020/12/17 14:03:24.749 [I] [init.go:35]  2222
+2020/12/17 14:03:24.749 [I] [init.go:35]  2222
+2020/12/17 14:03:24.749 [I] [init.go:35]  2222
+2020/12/17 14:03:24.749 [I] [init.go:35]  2222
+2020/12/17 14:03:24.749 [I] [init.go:35]  2222
+2020/12/17 14:03:24.749 [I] [init.go:35]  2222
+2020/12/17 14:03:24.749 [I] [init.go:35]  2222
+2020/12/17 14:03:24.749 [I] [init.go:35]  2222
+2020/12/17 14:03:24.749 [I] [main.go:17]  init sec success!
+2020/12/17 14:03:24.773 [I] [asm_amd64.s:1357]  start  WriteHandle
+2020/12/17 14:03:24.773 [I] [asm_amd64.s:1357]  start  WriteHandle
+2020/12/17 14:03:24.774 [I] [asm_amd64.s:1357]  start  WriteHandle
+2020/12/17 14:03:24.774 [I] [asm_amd64.s:1357]  start  WriteHandle
+2020/12/17 14:03:24.774 [I] [asm_amd64.s:1357]  start  WriteHandle
+2020/12/17 14:03:24.774 [I] [asm_amd64.s:1357]  start  WriteHandle
+2020/12/17 14:03:24.774 [I] [asm_amd64.s:1357]  start  WriteHandle
+2020/12/17 14:03:24.774 [I] [asm_amd64.s:1357]  start  WriteHandle
+2020/12/17 14:03:24.774 [I] [asm_amd64.s:1357]  start  WriteHandle
+2020/12/17 14:03:24.774 [I] [asm_amd64.s:1357]  start  WriteHandle
+2020/12/17 14:03:24.774 [I] [asm_amd64.s:1357]  start  WriteHandle
+2020/12/17 14:03:24.774 [I] [asm_amd64.s:1357]  start  WriteHandle
+2020/12/17 14:03:24.774 [I] [asm_amd64.s:1357]  start  WriteHandle
+2020/12/17 14:03:24.774 [I] [asm_amd64.s:1357]  start  WriteHandle
+2020/12/17 14:03:24.774 [I] [asm_amd64.s:1357]  start  WriteHandle
+2020/12/17 14:03:24.774 [I] [asm_amd64.s:1357]  start  WriteHandle
+2020/12/17 14:03:24.792 [D] [asm_amd64.s:1357]  begin watch key:/ganyuefeng/backend/secskill/product
+2020/12/17 14:03:24.814 [I] [asm_amd64.s:1357]  http server Running on http://192.168.199.99:9091
+2020/12/17 14:05:21.905 [D] [value.go:460]  ganyuefebg1111
+2020/12/17 14:05:21.905 [D] [value.go:460]  ClientAddr is 192.168.199.237
+2020/12/17 14:05:21.906 [D] [value.go:460]  111client request:[&{3     1  2020-12-17 14:05:21.905868792 +0800 CST m=+117.226106188 192.168.199.237  0xc00003cd90 <nil>}]
+2020/12/17 14:05:21.906 [D] [skill.go:106]  this is service SecKill
+2020/12/17 14:05:21.906 [D] [service.go:153]  this is antiSpam
+2020/12/17 14:05:21.906 [D] [service.go:153]  22this is antiSpam
+2020/12/17 14:05:21.906 [D] [service.go:153]  this is antiSpam
+2020/12/17 14:05:21.906 [D] [service.go:153]  this is antiSpam out
+2020/12/17 14:05:21.906 [D] [skill.go:106]  start SecInfoById
+2020/12/17 14:05:21.906 [D] [skill.go:106]  2222
+2020/12/17 14:05:21.923 [I] [asm_amd64.s:1357]  lpush success
+2020/12/17 14:05:31.910 [D] [server.go:2802]  |192.168.199.237|[97;42m 200 [0m|10.004723783s|   match|[97;44m GET     [0m /seckill   r:/seckill
+2020/12/17 14:08:40.802 [D] [value.go:460]  ganyuefebg1111
+2020/12/17 14:08:40.802 [D] [value.go:460]  ClientAddr is 192.168.199.237
+2020/12/17 14:08:40.803 [D] [value.go:460]  111client request:[&{3     1  2020-12-17 14:08:40.802900992 +0800 CST m=+316.123138348 192.168.199.237  0xc00003c230 <nil>}]
+2020/12/17 14:08:40.803 [D] [skill.go:106]  this is service SecKill
+2020/12/17 14:08:40.803 [D] [service.go:153]  this is antiSpam
+2020/12/17 14:08:40.803 [D] [service.go:153]  22this is antiSpam
+2020/12/17 14:08:40.803 [D] [service.go:153]  this is antiSpam
+2020/12/17 14:08:40.803 [D] [service.go:153]  this is antiSpam out
+2020/12/17 14:08:40.803 [D] [skill.go:106]  start SecInfoById
+2020/12/17 14:08:40.803 [D] [skill.go:106]  2222
+2020/12/17 14:08:40.821 [I] [asm_amd64.s:1357]  lpush success
+2020/12/17 14:08:50.804 [D] [server.go:2802]  |192.168.199.237|[97;42m 200 [0m|10.002015319s|   match|[97;44m GET     [0m /seckill   r:/seckill
+2020/12/17 14:10:30.917 [D] [value.go:460]  ganyuefebg1111
+2020/12/17 14:10:30.917 [D] [value.go:460]  ClientAddr is 192.168.199.237
+2020/12/17 14:10:30.918 [D] [value.go:460]  111client request:[&{3     1  2020-12-17 14:10:30.917897021 +0800 CST m=+426.238134393 192.168.199.237  0xc00003c380 <nil>}]
+2020/12/17 14:10:30.918 [D] [skill.go:106]  this is service SecKill
+2020/12/17 14:10:30.918 [D] [service.go:153]  this is antiSpam
+2020/12/17 14:10:30.918 [D] [service.go:153]  22this is antiSpam
+2020/12/17 14:10:30.918 [D] [service.go:153]  this is antiSpam
+2020/12/17 14:10:30.918 [D] [service.go:153]  this is antiSpam out
+2020/12/17 14:10:30.918 [D] [skill.go:106]  start SecInfoById
+2020/12/17 14:10:30.918 [D] [skill.go:106]  2222
+2020/12/17 14:10:30.928 [I] [asm_amd64.s:1357]  lpush success
+2020/12/17 14:10:40.919 [D] [server.go:2802]  |192.168.199.237|[97;42m 200 [0m|10.001714028s|   match|[97;44m GET     [0m /seckill   r:/seckill
+2020/12/17 14:14:20.076 [D] [asm_amd64.s:1357]  rpop from redis succ, data:1234
+2020/12/17 14:14:20.077 [E] [asm_amd64.s:1357]  json.Unmarshal failed, err:json: cannot unmarshal number into Go value of type service.SecResult
+2020/12/17 14:16:18.912 [D] [value.go:460]  ganyuefebg1111
+2020/12/17 14:16:18.912 [D] [value.go:460]  ClientAddr is 192.168.199.237
+2020/12/17 14:16:18.912 [D] [value.go:460]  111client request:[&{3     1  2020-12-17 14:16:18.912592806 +0800 CST m=+774.232830144 192.168.199.237  0xc00003c230 <nil>}]
+2020/12/17 14:16:18.912 [D] [skill.go:106]  this is service SecKill
+2020/12/17 14:16:18.912 [D] [service.go:153]  this is antiSpam
+2020/12/17 14:16:18.913 [D] [service.go:153]  22this is antiSpam
+2020/12/17 14:16:18.913 [D] [service.go:153]  this is antiSpam
+2020/12/17 14:16:18.913 [D] [service.go:153]  this is antiSpam out
+2020/12/17 14:16:18.913 [D] [skill.go:106]  start SecInfoById
+2020/12/17 14:16:18.913 [D] [skill.go:106]  2222
+2020/12/17 14:16:18.926 [I] [asm_amd64.s:1357]  lpush success
+2020/12/17 14:16:28.914 [D] [server.go:2802]  |192.168.199.237|[97;42m 200 [0m|10.002306161s|   match|[97;44m GET     [0m /seckill   r:/seckill
+2020/12/17 14:25:27.448 [D] [value.go:460]  ganyuefebg1111
+2020/12/17 14:25:27.448 [D] [value.go:460]  ClientAddr is 192.168.199.237
+2020/12/17 14:25:27.448 [D] [value.go:460]  111client request:[&{3     1  2020-12-17 14:25:27.448296338 +0800 CST m=+1322.768533574 192.168.199.237  0xc00003c230 <nil>}]
+2020/12/17 14:25:27.448 [D] [skill.go:106]  this is service SecKill
+2020/12/17 14:25:27.448 [D] [service.go:153]  this is antiSpam
+2020/12/17 14:25:27.448 [D] [service.go:153]  22this is antiSpam
+2020/12/17 14:25:27.448 [D] [service.go:153]  this is antiSpam
+2020/12/17 14:25:27.448 [D] [service.go:153]  this is antiSpam out
+2020/12/17 14:25:27.448 [D] [skill.go:106]  start SecInfoById
+2020/12/17 14:25:27.448 [D] [skill.go:106]  2222
+2020/12/17 14:25:27.455 [I] [asm_amd64.s:1357]  lpush success
+2020/12/17 14:25:37.449 [D] [server.go:2802]  |192.168.199.237|[97;42m 200 [0m|10.001034035s|   match|[97;44m GET     [0m /seckill   r:/seckill
+2020/12/17 14:28:03.479 [D] [value.go:460]  ganyuefebg1111
+2020/12/17 14:28:03.480 [D] [value.go:460]  ClientAddr is 192.168.199.237
+2020/12/17 14:28:03.480 [D] [value.go:460]  111client request:[&{3     1  2020-12-17 14:28:03.480019652 +0800 CST m=+1478.800257027 192.168.199.237  0xc00003c0e0 <nil>}]
+2020/12/17 14:28:03.480 [D] [skill.go:106]  this is service SecKill
+2020/12/17 14:28:03.480 [D] [service.go:153]  this is antiSpam
+2020/12/17 14:28:03.480 [D] [service.go:153]  22this is antiSpam
+2020/12/17 14:28:03.480 [D] [service.go:153]  this is antiSpam
+2020/12/17 14:28:03.480 [D] [service.go:153]  this is antiSpam out
+2020/12/17 14:28:03.480 [D] [skill.go:106]  start SecInfoById
+2020/12/17 14:28:03.480 [D] [skill.go:106]  2222
+2020/12/17 14:28:03.494 [I] [asm_amd64.s:1357]  lpush success
+2020/12/17 14:28:13.481 [D] [server.go:2802]  |192.168.199.237|[97;42m 200 [0m| 10.00152008s|   match|[97;44m GET     [0m /seckill   r:/seckill
+2020/12/17 14:32:08.945 [D] [value.go:460]  ganyuefebg1111
+2020/12/17 14:32:08.945 [D] [value.go:460]  ClientAddr is 192.168.199.237
+2020/12/17 14:32:08.945 [D] [value.go:460]  111client request:[&{3     1  2020-12-17 14:32:08.94525832 +0800 CST m=+1724.265495669 192.168.199.237  0xc00003c150 <nil>}]
+2020/12/17 14:32:08.945 [D] [skill.go:106]  this is service SecKill
+2020/12/17 14:32:08.945 [D] [service.go:153]  this is antiSpam
+2020/12/17 14:32:08.945 [D] [service.go:153]  22this is antiSpam
+2020/12/17 14:32:08.945 [D] [service.go:153]  this is antiSpam
+2020/12/17 14:32:08.945 [D] [service.go:153]  this is antiSpam out
+2020/12/17 14:32:08.945 [D] [skill.go:106]  start SecInfoById
+2020/12/17 14:32:08.945 [D] [skill.go:106]  2222
+2020/12/17 14:32:08.962 [I] [asm_amd64.s:1357]  lpush success
+2020/12/17 14:32:18.946 [D] [server.go:2802]  |192.168.199.237|[97;42m 200 [0m|10.001412766s|   match|[97;44m GET     [0m /seckill   r:/seckill
+2020/12/17 14:36:33.930 [D] [value.go:460]  ganyuefebg1111
+2020/12/17 14:36:33.930 [D] [value.go:460]  ClientAddr is 192.168.199.237
+2020/12/17 14:36:33.930 [D] [value.go:460]  111client request:[&{3     1  2020-12-17 14:36:33.930216611 +0800 CST m=+1989.250453941 192.168.199.237  0xc00003c230 <nil>}]
+2020/12/17 14:36:33.930 [D] [skill.go:106]  this is service SecKill
+2020/12/17 14:36:33.930 [D] [service.go:153]  this is antiSpam
+2020/12/17 14:36:33.930 [D] [service.go:153]  22this is antiSpam
+2020/12/17 14:36:33.930 [D] [service.go:153]  this is antiSpam
+2020/12/17 14:36:33.930 [D] [service.go:153]  this is antiSpam out
+2020/12/17 14:36:33.930 [D] [skill.go:106]  start SecInfoById
+2020/12/17 14:36:33.930 [D] [skill.go:106]  2222
+2020/12/17 14:36:33.947 [I] [asm_amd64.s:1357]  lpush success
+2020/12/17 14:36:43.934 [D] [server.go:2802]  |192.168.199.237|[97;42m 200 [0m|10.004769467s|   match|[97;44m GET     [0m /seckill   r:/seckill
+2020/12/17 14:38:45.259 [D] [value.go:460]  ganyuefebg1111
+2020/12/17 14:38:45.260 [D] [value.go:460]  ClientAddr is 192.168.199.237
+2020/12/17 14:38:45.260 [D] [value.go:460]  111client request:[&{3     1  2020-12-17 14:38:45.260103489 +0800 CST m=+2120.580340821 192.168.199.237  0xc00003c380 <nil>}]
+2020/12/17 14:38:45.260 [D] [skill.go:106]  this is service SecKill
+2020/12/17 14:38:45.260 [D] [service.go:153]  this is antiSpam
+2020/12/17 14:38:45.260 [D] [service.go:153]  22this is antiSpam
+2020/12/17 14:38:45.260 [D] [service.go:153]  this is antiSpam
+2020/12/17 14:38:45.260 [D] [service.go:153]  this is antiSpam out
+2020/12/17 14:38:45.260 [D] [skill.go:106]  start SecInfoById
+2020/12/17 14:38:45.260 [D] [skill.go:106]  2222
+2020/12/17 14:38:45.295 [I] [asm_amd64.s:1357]  lpush success
+2020/12/17 14:38:55.261 [D] [server.go:2802]  |192.168.199.237|[97;42m 200 [0m|10.001279235s|   match|[97;44m GET     [0m /seckill   r:/seckill
+2020/12/17 14:40:18.724 [D] [value.go:460]  ganyuefebg1111
+2020/12/17 14:40:18.724 [D] [value.go:460]  ClientAddr is 192.168.199.237
+2020/12/17 14:40:18.724 [D] [value.go:460]  111client request:[&{3     1  2020-12-17 14:40:18.724693472 +0800 CST m=+2214.044930815 192.168.199.237  0xc00003c150 <nil>}]
+2020/12/17 14:40:18.724 [D] [skill.go:106]  this is service SecKill
+2020/12/17 14:40:18.724 [D] [service.go:153]  this is antiSpam
+2020/12/17 14:40:18.725 [D] [service.go:153]  22this is antiSpam
+2020/12/17 14:40:18.725 [D] [service.go:153]  this is antiSpam
+2020/12/17 14:40:18.725 [D] [service.go:153]  this is antiSpam out
+2020/12/17 14:40:18.725 [D] [skill.go:106]  start SecInfoById
+2020/12/17 14:40:18.725 [D] [skill.go:106]  2222
+2020/12/17 14:40:18.740 [I] [asm_amd64.s:1357]  lpush success
+2020/12/17 14:40:28.725 [D] [server.go:2802]  |192.168.199.237|[97;42m 200 [0m|10.001308801s|   match|[97;44m GET     [0m /seckill   r:/seckill
+2020/12/17 14:41:57.327 [D] [value.go:460]  ganyuefebg1111
+2020/12/17 14:41:57.328 [D] [value.go:460]  ClientAddr is 192.168.199.237
+2020/12/17 14:41:57.328 [D] [value.go:460]  111client request:[&{3     1  2020-12-17 14:41:57.328153139 +0800 CST m=+2312.648390502 192.168.199.237  0xc00003c230 <nil>}]
+2020/12/17 14:41:57.328 [D] [skill.go:106]  this is service SecKill
+2020/12/17 14:41:57.328 [D] [service.go:153]  this is antiSpam
+2020/12/17 14:41:57.328 [D] [service.go:153]  22this is antiSpam
+2020/12/17 14:41:57.328 [D] [service.go:153]  this is antiSpam
+2020/12/17 14:41:57.328 [D] [service.go:153]  this is antiSpam out
+2020/12/17 14:41:57.328 [D] [skill.go:106]  start SecInfoById
+2020/12/17 14:41:57.328 [D] [skill.go:106]  2222
+2020/12/17 14:41:57.350 [I] [asm_amd64.s:1357]  lpush success
+2020/12/17 14:42:07.329 [D] [server.go:2802]  |192.168.199.237|[97;42m 200 [0m|10.001514682s|   match|[97;44m GET     [0m /seckill   r:/seckill
+2020/12/17 14:43:45.089 [D] [value.go:460]  ganyuefebg1111
+2020/12/17 14:43:45.090 [D] [value.go:460]  ClientAddr is 192.168.199.237
+2020/12/17 14:43:45.090 [D] [value.go:460]  111client request:[&{3     1  2020-12-17 14:43:45.089989721 +0800 CST m=+2420.410227083 192.168.199.237  0xc00003c150 <nil>}]
+2020/12/17 14:43:45.090 [D] [skill.go:106]  this is service SecKill
+2020/12/17 14:43:45.090 [D] [service.go:153]  this is antiSpam
+2020/12/17 14:43:45.090 [D] [service.go:153]  22this is antiSpam
+2020/12/17 14:43:45.090 [D] [service.go:153]  this is antiSpam
+2020/12/17 14:43:45.090 [D] [service.go:153]  this is antiSpam out
+2020/12/17 14:43:45.090 [D] [skill.go:106]  start SecInfoById
+2020/12/17 14:43:45.090 [D] [skill.go:106]  2222
+2020/12/17 14:43:45.114 [I] [asm_amd64.s:1357]  lpush success
+2020/12/17 14:43:55.091 [D] [server.go:2802]  |192.168.199.237|[97;42m 200 [0m|10.002113582s|   match|[97;44m GET     [0m /seckill   r:/seckill
+2020/12/17 14:49:31.665 [D] [value.go:460]  ganyuefebg1111
+2020/12/17 14:49:31.666 [D] [value.go:460]  ClientAddr is 192.168.199.237
+2020/12/17 14:49:31.666 [D] [value.go:460]  111client request:[&{3     1  2020-12-17 14:49:31.666076087 +0800 CST m=+2766.986313326 192.168.199.237  0xc00003c230 <nil>}]
+2020/12/17 14:49:31.666 [D] [skill.go:106]  this is service SecKill
+2020/12/17 14:49:31.666 [D] [service.go:153]  this is antiSpam
+2020/12/17 14:49:31.666 [D] [service.go:153]  22this is antiSpam
+2020/12/17 14:49:31.666 [D] [service.go:153]  this is antiSpam
+2020/12/17 14:49:31.666 [D] [service.go:153]  this is antiSpam out
+2020/12/17 14:49:31.666 [D] [skill.go:106]  start SecInfoById
+2020/12/17 14:49:31.666 [D] [skill.go:106]  2222
+2020/12/17 14:49:31.695 [I] [asm_amd64.s:1357]  lpush success
+2020/12/17 14:49:31.719 [D] [asm_amd64.s:1357]  rpop from redis succ, data:{"ProductId":3,"UserId":1,"Token":"a5d5e309fa6cb832ecb5fa59a2b413a1","TokenTime":1608187771,"Code":1002}
+2020/12/17 14:49:41.666 [D] [server.go:2802]  |192.168.199.237|[97;42m 200 [0m|10.001027965s|   match|[97;44m GET     [0m /seckill   r:/seckill
+2020/12/17 14:54:21.498 [D] [value.go:460]  ganyuefebg1111
+2020/12/17 14:54:21.499 [D] [value.go:460]  ClientAddr is 192.168.199.237
+2020/12/17 14:54:21.499 [D] [value.go:460]  111client request:[&{3     1  2020-12-17 14:54:21.499108216 +0800 CST m=+3056.819345585 192.168.199.237  0xc00003c0e0 <nil>}]
+2020/12/17 14:54:21.499 [D] [skill.go:106]  this is service SecKill
+2020/12/17 14:54:21.499 [D] [service.go:153]  this is antiSpam
+2020/12/17 14:54:21.499 [D] [service.go:153]  22this is antiSpam
+2020/12/17 14:54:21.499 [D] [service.go:153]  this is antiSpam
+2020/12/17 14:54:21.499 [D] [service.go:153]  this is antiSpam out
+2020/12/17 14:54:21.499 [D] [skill.go:106]  start SecInfoById
+2020/12/17 14:54:21.499 [D] [skill.go:106]  2222
+2020/12/17 14:54:21.529 [I] [asm_amd64.s:1357]  lpush success
+2020/12/17 14:54:22.214 [D] [asm_amd64.s:1357]  rpop from redis succ, data:{"ProductId":3,"UserId":1,"Token":"cdb8ce64aabe6d81df2f5ef01a4d8d77","TokenTime":1608188061,"Code":1002}
+2020/12/17 14:54:26.524 [D] [server.go:2802]  |192.168.199.237|[97;42m 200 [0m| 5.025132927s|   match|[97;44m GET     [0m /seckill   r:/seckill
+2020/12/17 14:54:26.531 [D] [value.go:460]  ganyuefebg1111
+2020/12/17 14:54:26.531 [D] [value.go:460]  ClientAddr is 192.168.199.237
+2020/12/17 14:54:26.531 [D] [value.go:460]  111client request:[&{3     1  2020-12-17 14:54:26.531144534 +0800 CST m=+3061.851381903 192.168.199.237  0xc00003c540 <nil>}]
+2020/12/17 14:54:26.531 [D] [skill.go:106]  this is service SecKill
+2020/12/17 14:54:26.531 [D] [service.go:153]  this is antiSpam
+2020/12/17 14:54:26.531 [D] [service.go:153]  22this is antiSpam
+2020/12/17 14:54:26.531 [D] [service.go:153]  this is antiSpam
+2020/12/17 14:54:26.531 [D] [service.go:153]  this is antiSpam out
+2020/12/17 14:54:26.531 [D] [skill.go:106]  start SecInfoById
+2020/12/17 14:54:26.531 [D] [skill.go:106]  2222
+2020/12/17 14:54:26.556 [I] [asm_amd64.s:1357]  lpush success
+2020/12/17 14:54:27.227 [D] [asm_amd64.s:1357]  rpop from redis succ, data:{"ProductId":3,"UserId":1,"Token":"62907632c1008bd1c8e47870ab429dc3","TokenTime":1608188066,"Code":1002}
+2020/12/17 14:54:36.534 [D] [server.go:2802]  |192.168.199.237|[97;42m 200 [0m|10.003980842s|   match|[97;44m GET     [0m /seckill   r:/seckill
+2020/12/17 14:56:08.063 [D] [value.go:460]  ganyuefebg1111
+2020/12/17 14:56:08.063 [D] [value.go:460]  ClientAddr is 192.168.199.237
+2020/12/17 14:56:08.063 [D] [value.go:460]  111client request:[&{3     1  2020-12-17 14:56:08.063536535 +0800 CST m=+3163.383774021 192.168.199.237  0xc00003c0e0 <nil>}]
+2020/12/17 14:56:08.063 [D] [skill.go:106]  this is service SecKill
+2020/12/17 14:56:08.063 [D] [service.go:153]  this is antiSpam
+2020/12/17 14:56:08.063 [D] [service.go:153]  22this is antiSpam
+2020/12/17 14:56:08.063 [D] [service.go:153]  this is antiSpam
+2020/12/17 14:56:08.064 [D] [service.go:153]  this is antiSpam out
+2020/12/17 14:56:08.064 [D] [skill.go:106]  start SecInfoById
+2020/12/17 14:56:08.064 [D] [skill.go:106]  2222
+2020/12/17 14:56:08.090 [I] [asm_amd64.s:1357]  lpush success
+2020/12/17 14:56:08.815 [D] [asm_amd64.s:1357]  rpop from redis succ, data:{"ProductId":3,"UserId":1,"Token":"4ff2920dd90f93f739ccb5f168f93315","TokenTime":1608188168,"Code":1002}
+2020/12/17 14:56:18.065 [D] [server.go:2802]  |192.168.199.237|[97;42m 200 [0m|10.002148238s|   match|[97;44m GET     [0m /seckill   r:/seckill
+2020/12/17 14:56:32.916 [D] [asm_amd64.s:1357]  rpop from redis succ, data:1234
+2020/12/17 14:56:32.916 [E] [asm_amd64.s:1357]  json.Unmarshal failed, err:json: cannot unmarshal number into Go value of type service.SecResult
+2020/12/17 15:02:17.210 [D] [init.go:379]  initredis start
+2020/12/17 15:02:17.219 [D] [init.go:379]  initRedis success!!
+2020/12/17 15:02:17.219 [D] [init.go:386]  initEtcd success
+2020/12/17 15:02:17.219 [D] [init.go:393]  key is /ganyuefeng/backend/secskill/product
+2020/12/17 15:02:17.247 [D] [init.go:393]  key is /ganyuefeng/backend/secskill/product
+2020/12/17 15:02:17.247 [D] [init.go:393]  key[0] valud[key:"/ganyuefeng/backend/secskill/product" create_revision:34 mod_revision:38 version:5 value:"[{\"ProductId\":1029,\"StartTime\":1505008800,\"EndTime\":1505012400,\"Status\":0,\"Total\":1000,\"Left\":1000,\"OnePersonBuyLimit\":0,\"BuyRate\":0,\"SoldMaxLimit\":0},{\"ProductId\":1027,\"StartTime\":1505008800,\"EndTime\":1505012400,\"Status\":0,\"Total\":2000,\"Left\":1000,\"OnePersonBuyLimit\":0,\"BuyRate\":0,\"SoldMaxLimit\":0},{\"ProductId\":1,\"StartTime\":1608186520,\"EndTime\":1608199320,\"Status\":0,\"Total\":100,\"Left\":0,\"OnePersonBuyLimit\":3,\"BuyRate\":10,\"SoldMaxLimit\":50},{\"ProductId\":2,\"StartTime\":1608266320,\"EndTime\":1608599320,\"Status\":0,\"Total\":100,\"Left\":0,\"OnePersonBuyLimit\":3,\"BuyRate\":3,\"SoldMaxLimit\":3},{\"ProductId\":3,\"StartTime\":1608169920,\"EndTime\":1609169800,\"Status\":0,\"Total\":100,\"Left\":0,\"OnePersonBuyLimit\":3,\"BuyRate\":3,\"SoldMaxLimit\":3},{\"ProductId\":4,\"StartTime\":1608170700,\"EndTime\":1609170700,\"Status\":0,\"Total\":100,\"Left\":0,\"OnePersonBuyLimit\":3,\"BuyRate\":10,\"SoldMaxLimit\":3}]" ]
+2020/12/17 15:02:17.248 [D] [init.go:393]  ganyuefeng info conf is [[{1029 1505008800 1505012400 0 1000 1000} {1027 1505008800 1505012400 0 2000 1000} {1 1608186520 1608199320 0 100 0} {2 1608266320 1608599320 0 100 0} {3 1608169920 1609169800 0 100 0} {4 1608170700 1609170700 0 100 0}]]
+2020/12/17 15:02:17.248 [D] [init.go:393]  loadSecConf success!
+2020/12/17 15:02:17.248 [D] [init.go:98]  initredis start
+2020/12/17 15:02:17.249 [D] [init.go:98]  initRedis success!!
+2020/12/17 15:02:17.250 [D] [init.go:399]  init service succ, config:&{{192.168.199.99:6379 64 0 30} {127.0.0.1:6379 8 64 300} { 8 64 300} {localhost:2379 5 /ganyuefeng/backend/secskill /ganyuefeng/backend/secskill/product} ./logs/sec.log debug map[1:0xc00003f110 2:0xc00003f140 3:0xc00003f170 4:0xc00003f1a0 1027:0xc00003f0e0 1029:0xc00003f0b0] {{0 0} 0 0 0 0} tyP87zZKzITuzaUjhmbqhNIDnyg6f2KP [localhost baidu.com/seckill] map[] map[] {50 1 500 10} 0xc000211110 0xc000211180 <nil> <nil> {{0 0} 0 0 0 0} 16 16 <nil> 0 map[] {0 0}}
+2020/12/17 15:02:17.252 [I] [init.go:35]  111111: 16
+2020/12/17 15:02:17.252 [I] [init.go:35]  2222
+2020/12/17 15:02:17.252 [I] [init.go:35]  2222
+2020/12/17 15:02:17.252 [I] [init.go:35]  2222
+2020/12/17 15:02:17.252 [I] [init.go:35]  2222
+2020/12/17 15:02:17.252 [I] [init.go:35]  2222
+2020/12/17 15:02:17.252 [I] [init.go:35]  2222
+2020/12/17 15:02:17.252 [I] [init.go:35]  2222
+2020/12/17 15:02:17.252 [I] [init.go:35]  2222
+2020/12/17 15:02:17.252 [I] [init.go:35]  2222
+2020/12/17 15:02:17.252 [I] [init.go:35]  2222
+2020/12/17 15:02:17.252 [I] [init.go:35]  2222
+2020/12/17 15:02:17.252 [I] [init.go:35]  2222
+2020/12/17 15:02:17.252 [I] [init.go:35]  2222
+2020/12/17 15:02:17.252 [I] [init.go:35]  2222
+2020/12/17 15:02:17.252 [I] [init.go:35]  2222
+2020/12/17 15:02:17.252 [I] [init.go:35]  2222
+2020/12/17 15:02:17.252 [I] [main.go:17]  init sec success!
+2020/12/17 15:02:17.281 [I] [asm_amd64.s:1357]  start  WriteHandle
+2020/12/17 15:02:17.281 [I] [asm_amd64.s:1357]  start  WriteHandle
+2020/12/17 15:02:17.282 [I] [asm_amd64.s:1357]  start  WriteHandle
+2020/12/17 15:02:17.282 [I] [asm_amd64.s:1357]  start  WriteHandle
+2020/12/17 15:02:17.282 [I] [asm_amd64.s:1357]  start  WriteHandle
+2020/12/17 15:02:17.282 [I] [asm_amd64.s:1357]  start  WriteHandle
+2020/12/17 15:02:17.282 [I] [asm_amd64.s:1357]  start  WriteHandle
+2020/12/17 15:02:17.282 [I] [asm_amd64.s:1357]  start  WriteHandle
+2020/12/17 15:02:17.282 [I] [asm_amd64.s:1357]  start  WriteHandle
+2020/12/17 15:02:17.282 [I] [asm_amd64.s:1357]  start  WriteHandle
+2020/12/17 15:02:17.282 [I] [asm_amd64.s:1357]  start  WriteHandle
+2020/12/17 15:02:17.282 [I] [asm_amd64.s:1357]  start  WriteHandle
+2020/12/17 15:02:17.282 [I] [asm_amd64.s:1357]  start  WriteHandle
+2020/12/17 15:02:17.282 [I] [asm_amd64.s:1357]  start  WriteHandle
+2020/12/17 15:02:17.282 [I] [asm_amd64.s:1357]  start  WriteHandle
+2020/12/17 15:02:17.282 [I] [asm_amd64.s:1357]  start  WriteHandle
+2020/12/17 15:02:17.306 [I] [asm_amd64.s:1357]  http server Running on http://192.168.199.99:9091
+2020/12/17 15:02:17.351 [D] [asm_amd64.s:1357]  rpop from redis succ, data:redis
+2020/12/17 15:02:17.351 [E] [asm_amd64.s:1357]  json.Unmarshal failed, err:invalid character 'r' looking for beginning of value
+2020/12/17 15:02:17.353 [D] [asm_amd64.s:1357]  begin watch key:/ganyuefeng/backend/secskill/product
+2020/12/17 15:02:55.087 [D] [value.go:460]  ganyuefebg1111
+2020/12/17 15:02:55.087 [D] [value.go:460]  ClientAddr is 192.168.199.237
+2020/12/17 15:02:55.088 [D] [value.go:460]  111client request:[&{3     1  2020-12-17 15:02:55.087914376 +0800 CST m=+37.924826396 192.168.199.237  0xc00003cbd0 <nil>}]
+2020/12/17 15:02:55.088 [D] [skill.go:106]  this is service SecKill
+2020/12/17 15:02:55.088 [D] [service.go:153]  this is antiSpam
+2020/12/17 15:02:55.088 [D] [service.go:153]  22this is antiSpam
+2020/12/17 15:02:55.088 [D] [service.go:153]  this is antiSpam
+2020/12/17 15:02:55.088 [D] [service.go:153]  this is antiSpam out
+2020/12/17 15:02:55.088 [D] [skill.go:106]  start SecInfoById
+2020/12/17 15:02:55.088 [D] [skill.go:106]  2222
+2020/12/17 15:02:55.109 [I] [asm_amd64.s:1357]  lpush success
+2020/12/17 15:02:55.527 [D] [asm_amd64.s:1357]  rpop from redis succ, data:{"ProductId":3,"UserId":1,"Token":"bc0e2bbd557e12df66d630ec564a21f6","TokenTime":1608188575,"Code":1002}
+2020/12/17 15:03:05.091 [D] [server.go:2802]  |192.168.199.237|[97;42m 200 [0m|10.004158787s|   match|[97;44m GET     [0m /seckill   r:/seckill
+2020/12/17 15:03:24.197 [D] [value.go:460]  ganyuefebg1111
+2020/12/17 15:03:24.197 [D] [value.go:460]  ClientAddr is 192.168.199.237
+2020/12/17 15:03:24.197 [D] [value.go:460]  111client request:[&{3     1  2020-12-17 15:03:24.197338549 +0800 CST m=+67.034250466 192.168.199.237  0xc00003cfc0 <nil>}]
+2020/12/17 15:03:24.197 [D] [skill.go:106]  this is service SecKill
+2020/12/17 15:03:24.197 [D] [service.go:153]  this is antiSpam
+2020/12/17 15:03:24.197 [D] [service.go:153]  22this is antiSpam
+2020/12/17 15:03:24.197 [D] [service.go:153]  this is antiSpam
+2020/12/17 15:03:24.197 [D] [service.go:153]  this is antiSpam out
+2020/12/17 15:03:24.197 [D] [skill.go:106]  start SecInfoById
+2020/12/17 15:03:24.197 [D] [skill.go:106]  2222
+2020/12/17 15:03:24.214 [I] [asm_amd64.s:1357]  lpush success
+2020/12/17 15:03:24.676 [D] [asm_amd64.s:1357]  rpop from redis succ, data:{"ProductId":3,"UserId":1,"Token":"daef33f6d8b712374b30f28bb37c6991","TokenTime":1608188604,"Code":1002}
+2020/12/17 15:03:34.204 [D] [server.go:2802]  |192.168.199.237|[97;42m 200 [0m|10.007752051s|   match|[97;44m GET     [0m /seckill   r:/seckill
+2020/12/17 15:07:38.615 [D] [init.go:379]  initredis start
+2020/12/17 15:07:38.624 [D] [init.go:379]  initRedis success!!
+2020/12/17 15:07:38.625 [D] [init.go:386]  initEtcd success
+2020/12/17 15:07:38.625 [D] [init.go:393]  key is /ganyuefeng/backend/secskill/product
+2020/12/17 15:07:38.648 [D] [init.go:393]  key is /ganyuefeng/backend/secskill/product
+2020/12/17 15:07:38.649 [D] [init.go:393]  key[0] valud[key:"/ganyuefeng/backend/secskill/product" create_revision:34 mod_revision:38 version:5 value:"[{\"ProductId\":1029,\"StartTime\":1505008800,\"EndTime\":1505012400,\"Status\":0,\"Total\":1000,\"Left\":1000,\"OnePersonBuyLimit\":0,\"BuyRate\":0,\"SoldMaxLimit\":0},{\"ProductId\":1027,\"StartTime\":1505008800,\"EndTime\":1505012400,\"Status\":0,\"Total\":2000,\"Left\":1000,\"OnePersonBuyLimit\":0,\"BuyRate\":0,\"SoldMaxLimit\":0},{\"ProductId\":1,\"StartTime\":1608186520,\"EndTime\":1608199320,\"Status\":0,\"Total\":100,\"Left\":0,\"OnePersonBuyLimit\":3,\"BuyRate\":10,\"SoldMaxLimit\":50},{\"ProductId\":2,\"StartTime\":1608266320,\"EndTime\":1608599320,\"Status\":0,\"Total\":100,\"Left\":0,\"OnePersonBuyLimit\":3,\"BuyRate\":3,\"SoldMaxLimit\":3},{\"ProductId\":3,\"StartTime\":1608169920,\"EndTime\":1609169800,\"Status\":0,\"Total\":100,\"Left\":0,\"OnePersonBuyLimit\":3,\"BuyRate\":3,\"SoldMaxLimit\":3},{\"ProductId\":4,\"StartTime\":1608170700,\"EndTime\":1609170700,\"Status\":0,\"Total\":100,\"Left\":0,\"OnePersonBuyLimit\":3,\"BuyRate\":10,\"SoldMaxLimit\":3}]" ]
+2020/12/17 15:07:38.649 [D] [init.go:393]  ganyuefeng info conf is [[{1029 1505008800 1505012400 0 1000 1000} {1027 1505008800 1505012400 0 2000 1000} {1 1608186520 1608199320 0 100 0} {2 1608266320 1608599320 0 100 0} {3 1608169920 1609169800 0 100 0} {4 1608170700 1609170700 0 100 0}]]
+2020/12/17 15:07:38.649 [D] [init.go:393]  loadSecConf success!
+2020/12/17 15:07:38.649 [D] [init.go:98]  initredis start
+2020/12/17 15:07:38.662 [D] [init.go:98]  initRedis success!!
+2020/12/17 15:07:38.663 [D] [init.go:399]  init service succ, config:&{{192.168.199.99:6379 64 0 30} {127.0.0.1:6379 8 64 300} { 8 64 300} {localhost:2379 5 /ganyuefeng/backend/secskill /ganyuefeng/backend/secskill/product} ./logs/sec.log debug map[1:0xc00003f110 2:0xc00003f140 3:0xc00003f170 4:0xc00003f1a0 1027:0xc00003f0e0 1029:0xc00003f0b0] {{0 0} 0 0 0 0} tyP87zZKzITuzaUjhmbqhNIDnyg6f2KP [localhost baidu.com/seckill] map[] map[] {50 1 500 10} 0xc000213180 0xc0002131f0 <nil> <nil> {{0 0} 0 0 0 0} 16 16 <nil> 0 map[] {0 0}}
+2020/12/17 15:07:38.665 [I] [init.go:35]  111111: 16
+2020/12/17 15:07:38.665 [I] [init.go:35]  2222
+2020/12/17 15:07:38.665 [I] [init.go:35]  2222
+2020/12/17 15:07:38.665 [I] [init.go:35]  2222
+2020/12/17 15:07:38.665 [I] [init.go:35]  2222
+2020/12/17 15:07:38.665 [I] [init.go:35]  2222
+2020/12/17 15:07:38.665 [I] [init.go:35]  2222
+2020/12/17 15:07:38.665 [I] [init.go:35]  2222
+2020/12/17 15:07:38.665 [I] [init.go:35]  2222
+2020/12/17 15:07:38.665 [I] [init.go:35]  2222
+2020/12/17 15:07:38.665 [I] [init.go:35]  2222
+2020/12/17 15:07:38.665 [I] [init.go:35]  2222
+2020/12/17 15:07:38.665 [I] [init.go:35]  2222
+2020/12/17 15:07:38.665 [I] [init.go:35]  2222
+2020/12/17 15:07:38.665 [I] [init.go:35]  2222
+2020/12/17 15:07:38.665 [I] [init.go:35]  2222
+2020/12/17 15:07:38.665 [I] [init.go:35]  2222
+2020/12/17 15:07:38.665 [I] [main.go:17]  init sec success!
+2020/12/17 15:07:38.692 [I] [asm_amd64.s:1357]  start  WriteHandle
+2020/12/17 15:07:38.692 [I] [asm_amd64.s:1357]  start  WriteHandle
+2020/12/17 15:07:38.692 [I] [asm_amd64.s:1357]  start  WriteHandle
+2020/12/17 15:07:38.692 [I] [asm_amd64.s:1357]  start  WriteHandle
+2020/12/17 15:07:38.692 [I] [asm_amd64.s:1357]  start  WriteHandle
+2020/12/17 15:07:38.692 [I] [asm_amd64.s:1357]  start  WriteHandle
+2020/12/17 15:07:38.692 [I] [asm_amd64.s:1357]  start  WriteHandle
+2020/12/17 15:07:38.693 [I] [asm_amd64.s:1357]  start  WriteHandle
+2020/12/17 15:07:38.693 [I] [asm_amd64.s:1357]  start  WriteHandle
+2020/12/17 15:07:38.693 [I] [asm_amd64.s:1357]  start  WriteHandle
+2020/12/17 15:07:38.693 [I] [asm_amd64.s:1357]  start  WriteHandle
+2020/12/17 15:07:38.693 [I] [asm_amd64.s:1357]  start  WriteHandle
+2020/12/17 15:07:38.693 [I] [asm_amd64.s:1357]  start  WriteHandle
+2020/12/17 15:07:38.693 [I] [asm_amd64.s:1357]  start  WriteHandle
+2020/12/17 15:07:38.693 [I] [asm_amd64.s:1357]  start  WriteHandle
+2020/12/17 15:07:38.693 [I] [asm_amd64.s:1357]  start  WriteHandle
+2020/12/17 15:07:38.717 [D] [asm_amd64.s:1357]  begin watch key:/ganyuefeng/backend/secskill/product
+2020/12/17 15:07:38.737 [I] [asm_amd64.s:1357]  http server Running on http://192.168.199.99:9091
+2020/12/17 15:07:47.724 [D] [value.go:460]  ganyuefebg1111
+2020/12/17 15:07:47.725 [D] [value.go:460]  ClientAddr is 192.168.199.237
+2020/12/17 15:07:47.725 [D] [value.go:460]  111client request:[&{3     1  2020-12-17 15:07:47.725009796 +0800 CST m=+9.160767542 192.168.199.237  0xc00003c850 0xc0001c36e0}]
+2020/12/17 15:07:47.725 [D] [skill.go:106]  this is service SecKill
+2020/12/17 15:07:47.725 [D] [service.go:153]  this is antiSpam
+2020/12/17 15:07:47.725 [D] [service.go:153]  22this is antiSpam
+2020/12/17 15:07:47.725 [D] [service.go:153]  this is antiSpam
+2020/12/17 15:07:47.725 [D] [service.go:153]  this is antiSpam out
+2020/12/17 15:07:47.725 [D] [skill.go:106]  start SecInfoById
+2020/12/17 15:07:47.725 [D] [skill.go:106]  2222
+2020/12/17 15:07:47.750 [I] [asm_amd64.s:1357]  lpush success
+2020/12/17 15:07:47.761 [D] [asm_amd64.s:1357]  rpop from redis succ, data:{"ProductId":3,"UserId":1,"Token":"d4f39c5b6f1f597de1e5b91f280b1f7b","TokenTime":1608188867,"Code":1002}
+2020/12/17 15:07:47.762 [D] [server.go:2802]  |192.168.199.237|[97;42m 200 [0m|  37.457752ms|   match|[97;44m GET     [0m /seckill   r:/seckill
+2020/12/17 15:08:42.541 [D] [value.go:460]  ganyuefebg1111
+2020/12/17 15:08:42.541 [D] [value.go:460]  ClientAddr is 192.168.199.237
+2020/12/17 15:08:42.541 [D] [value.go:460]  111client request:[&{2     1  2020-12-17 15:08:42.541290534 +0800 CST m=+63.977048190 192.168.199.237  0xc00003cee0 0xc00063a8a0}]
+2020/12/17 15:08:42.541 [D] [skill.go:106]  this is service SecKill
+2020/12/17 15:08:42.541 [D] [service.go:153]  this is antiSpam
+2020/12/17 15:08:42.541 [D] [service.go:153]  22this is antiSpam
+2020/12/17 15:08:42.541 [D] [service.go:153]  this is antiSpam
+2020/12/17 15:08:42.541 [D] [service.go:153]  this is antiSpam out
+2020/12/17 15:08:42.541 [D] [skill.go:106]  start SecInfoById
+2020/12/17 15:08:42.541 [W] [skill.go:106]  userId[1] secInfoByid failed, code[1005] req[&{2     1  2020-12-17 15:08:42.541290534 +0800 CST m=+63.977048190 192.168.199.237  0xc00003cee0 0xc00063a8a0}]
+2020/12/17 15:08:42.541 [D] [server.go:2802]  |192.168.199.237|[97;42m 200 [0m|    602.874µs|   match|[97;44m GET     [0m /seckill   r:/seckill
+2020/12/17 15:09:01.283 [D] [value.go:460]  ganyuefebg1111
+2020/12/17 15:09:01.284 [D] [value.go:460]  ClientAddr is 192.168.199.237
+2020/12/17 15:09:01.284 [D] [value.go:460]  111client request:[&{1     1  2020-12-17 15:09:01.284021482 +0800 CST m=+82.719779107 192.168.199.237  0xc00003d180 0xc00063ae40}]
+2020/12/17 15:09:01.284 [D] [skill.go:106]  this is service SecKill
+2020/12/17 15:09:01.284 [D] [service.go:153]  this is antiSpam
+2020/12/17 15:09:01.284 [D] [service.go:153]  22this is antiSpam
+2020/12/17 15:09:01.284 [D] [service.go:153]  this is antiSpam
+2020/12/17 15:09:01.284 [D] [service.go:153]  this is antiSpam out
+2020/12/17 15:09:01.284 [D] [skill.go:106]  start SecInfoById
+2020/12/17 15:09:01.284 [D] [skill.go:106]  2222
+2020/12/17 15:09:01.306 [I] [asm_amd64.s:1357]  lpush success
+2020/12/17 15:09:01.936 [D] [asm_amd64.s:1357]  rpop from redis succ, data:{"ProductId":1,"UserId":1,"Token":"9dc0e999622e75f5602dfc8737303866","TokenTime":1608188941,"Code":1002}
+2020/12/17 15:09:01.936 [D] [server.go:2802]  |192.168.199.237|[97;42m 200 [0m| 652.933152ms|   match|[97;44m GET     [0m /seckill   r:/seckill
+2020/12/17 15:09:14.499 [D] [value.go:460]  ganyuefebg1111
+2020/12/17 15:09:14.499 [D] [value.go:460]  ClientAddr is 192.168.199.237
+2020/12/17 15:09:14.499 [D] [value.go:460]  111client request:[&{4     1  2020-12-17 15:09:14.499608421 +0800 CST m=+95.935366085 192.168.199.237  0xc00003d490 0xc00063b020}]
+2020/12/17 15:09:14.499 [D] [skill.go:106]  this is service SecKill
+2020/12/17 15:09:14.499 [D] [service.go:153]  this is antiSpam
+2020/12/17 15:09:14.499 [D] [service.go:153]  22this is antiSpam
+2020/12/17 15:09:14.499 [D] [service.go:153]  this is antiSpam
+2020/12/17 15:09:14.499 [D] [service.go:153]  this is antiSpam out
+2020/12/17 15:09:14.499 [D] [skill.go:106]  start SecInfoById
+2020/12/17 15:09:14.499 [D] [skill.go:106]  2222
+2020/12/17 15:09:14.512 [I] [asm_amd64.s:1357]  lpush success
+2020/12/17 15:09:14.964 [D] [asm_amd64.s:1357]  rpop from redis succ, data:{"ProductId":4,"UserId":1,"Token":"5488222bb80569b6adb2b884f6c2d075","TokenTime":1608188954,"Code":1002}
+2020/12/17 15:09:14.964 [D] [server.go:2802]  |192.168.199.237|[97;42m 200 [0m| 465.499304ms|   match|[97;44m GET     [0m /seckill   r:/seckill
+2020/12/17 15:11:06.855 [D] [asm_amd64.s:1357]  get config from etcd, PUT "/ganyuefeng/backend/secskill/product" : "[{\"ProductId\":1029,\"StartTime\":1505008800,\"EndTime\":1505012400,\"Status\":0,\"Total\":1000,\"Left\":1000,\"OnePersonBuyLimit\":0,\"BuyRate\":0,\"SoldMaxLimit\":0},{\"ProductId\":1027,\"StartTime\":1505008800,\"EndTime\":1505012400,\"Status\":0,\"Total\":2000,\"Left\":1000,\"OnePersonBuyLimit\":0,\"BuyRate\":0,\"SoldMaxLimit\":0},{\"ProductId\":1,\"StartTime\":1608186520,\"EndTime\":1608199320,\"Status\":0,\"Total\":100,\"Left\":0,\"OnePersonBuyLimit\":3,\"BuyRate\":10,\"SoldMaxLimit\":50},{\"ProductId\":2,\"StartTime\":1608266320,\"EndTime\":1608599320,\"Status\":0,\"Total\":100,\"Left\":0,\"OnePersonBuyLimit\":3,\"BuyRate\":3,\"SoldMaxLimit\":3},{\"ProductId\":3,\"StartTime\":1608169920,\"EndTime\":1609169800,\"Status\":0,\"Total\":100,\"Left\":0,\"OnePersonBuyLimit\":3,\"BuyRate\":3,\"SoldMaxLimit\":3},{\"ProductId\":4,\"StartTime\":1608170700,\"EndTime\":1609170700,\"Status\":0,\"Total\":100,\"Left\":0,\"OnePersonBuyLimit\":3,\"BuyRate\":10,\"SoldMaxLimit\":3},{\"ProductId\":5,\"StartTime\":1608189120,\"EndTime\":1608189300,\"Status\":0,\"Total\":10,\"Left\":0,\"OnePersonBuyLimit\":1,\"BuyRate\":1,\"SoldMaxLimit\":1}]"
+
+2020/12/17 15:11:06.855 [D] [asm_amd64.s:1357]  get config from etcd succ, [{1029 1505008800 1505012400 0 1000 1000} {1027 1505008800 1505012400 0 2000 1000} {1 1608186520 1608199320 0 100 0} {2 1608266320 1608599320 0 100 0} {3 1608169920 1609169800 0 100 0} {4 1608170700 1609170700 0 100 0} {5 1608189120 1608189300 0 10 0}]
+2020/12/17 15:11:20.091 [D] [value.go:460]  ganyuefebg1111
+2020/12/17 15:11:20.091 [D] [value.go:460]  ClientAddr is 192.168.199.237
+2020/12/17 15:11:20.091 [D] [value.go:460]  111client request:[&{5     1  2020-12-17 15:11:20.091384594 +0800 CST m=+221.527142254 192.168.199.237  0xc00003c230 0xc0002adb60}]
+2020/12/17 15:11:20.091 [D] [skill.go:106]  this is service SecKill
+2020/12/17 15:11:20.091 [D] [service.go:153]  this is antiSpam
+2020/12/17 15:11:20.091 [D] [service.go:153]  22this is antiSpam
+2020/12/17 15:11:20.091 [D] [service.go:153]  this is antiSpam
+2020/12/17 15:11:20.091 [D] [service.go:153]  this is antiSpam out
+2020/12/17 15:11:20.091 [D] [skill.go:106]  start SecInfoById
+2020/12/17 15:11:20.091 [W] [skill.go:106]  userId[1] secInfoByid failed, code[1005] req[&{5     1  2020-12-17 15:11:20.091384594 +0800 CST m=+221.527142254 192.168.199.237  0xc00003c230 0xc0002adb60}]
+2020/12/17 15:11:20.091 [D] [server.go:2802]  |192.168.199.237|[97;42m 200 [0m|     674.46µs|   match|[97;44m GET     [0m /seckill   r:/seckill
+2020/12/17 15:16:23.577 [D] [value.go:460]  ganyuefebg1111
+2020/12/17 15:16:23.577 [D] [value.go:460]  ClientAddr is 192.168.199.237
+2020/12/17 15:16:23.577 [D] [value.go:460]  111client request:[&{5     1  2020-12-17 15:16:23.577370017 +0800 CST m=+525.013127844 192.168.199.237  0xc00003c150 0xc0002ada40}]
+2020/12/17 15:16:23.577 [D] [skill.go:106]  this is service SecKill
+2020/12/17 15:16:23.577 [D] [service.go:153]  this is antiSpam
+2020/12/17 15:16:23.577 [D] [service.go:153]  22this is antiSpam
+2020/12/17 15:16:23.577 [D] [service.go:153]  this is antiSpam
+2020/12/17 15:16:23.577 [D] [service.go:153]  this is antiSpam out
+2020/12/17 15:16:23.577 [D] [skill.go:106]  start SecInfoById
+2020/12/17 15:16:23.578 [W] [skill.go:106]  userId[1] secInfoByid failed, code[1006] req[&{5     1  2020-12-17 15:16:23.577370017 +0800 CST m=+525.013127844 192.168.199.237  0xc00003c150 0xc0002ada40}]
+2020/12/17 15:16:23.578 [D] [server.go:2802]  |192.168.199.237|[97;42m 200 [0m|   1.276636ms|   match|[97;44m GET     [0m /seckill   r:/seckill
+2020/12/17 15:16:33.600 [D] [value.go:460]  ganyuefebg1111
+2020/12/17 15:16:33.600 [D] [value.go:460]  ClientAddr is 192.168.199.237
+2020/12/17 15:16:33.600 [D] [value.go:460]  111client request:[&{2     1  2020-12-17 15:16:33.600845715 +0800 CST m=+535.036603364 192.168.199.237  0xc00003c3f0 0xc0002adda0}]
+2020/12/17 15:16:33.600 [D] [skill.go:106]  this is service SecKill
+2020/12/17 15:16:33.600 [D] [service.go:153]  this is antiSpam
+2020/12/17 15:16:33.601 [D] [service.go:153]  22this is antiSpam
+2020/12/17 15:16:33.601 [D] [service.go:153]  this is antiSpam
+2020/12/17 15:16:33.601 [D] [service.go:153]  this is antiSpam out
+2020/12/17 15:16:33.601 [D] [skill.go:106]  start SecInfoById
+2020/12/17 15:16:33.601 [W] [skill.go:106]  userId[1] secInfoByid failed, code[1005] req[&{2     1  2020-12-17 15:16:33.600845715 +0800 CST m=+535.036603364 192.168.199.237  0xc00003c3f0 0xc0002adda0}]
+2020/12/17 15:16:33.601 [D] [server.go:2802]  |192.168.199.237|[97;42m 200 [0m|    649.068µs|   match|[97;44m GET     [0m /seckill   r:/seckill
+2020/12/17 15:16:38.066 [D] [value.go:460]  ganyuefebg1111
+2020/12/17 15:16:38.066 [D] [value.go:460]  ClientAddr is 192.168.199.237
+2020/12/17 15:16:38.066 [D] [value.go:460]  111client request:[&{1     1  2020-12-17 15:16:38.066833415 +0800 CST m=+539.502591073 192.168.199.237  0xc00003c620 0xc00007c3c0}]
+2020/12/17 15:16:38.066 [D] [skill.go:106]  this is service SecKill
+2020/12/17 15:16:38.067 [D] [service.go:153]  this is antiSpam
+2020/12/17 15:16:38.067 [D] [service.go:153]  22this is antiSpam
+2020/12/17 15:16:38.067 [D] [service.go:153]  this is antiSpam
+2020/12/17 15:16:38.067 [D] [service.go:153]  this is antiSpam out
+2020/12/17 15:16:38.067 [D] [skill.go:106]  start SecInfoById
+2020/12/17 15:16:38.067 [D] [skill.go:106]  2222
+2020/12/17 15:16:38.080 [I] [asm_amd64.s:1357]  lpush success
+2020/12/17 15:16:38.783 [D] [asm_amd64.s:1357]  rpop from redis succ, data:{"ProductId":1,"UserId":1,"Token":"dfc700978aa0239d5aa7bf13c3b08e4c","TokenTime":1608189398,"Code":1002}
+2020/12/17 15:16:38.783 [D] [server.go:2802]  |192.168.199.237|[97;42m 200 [0m| 717.037719ms|   match|[97;44m GET     [0m /seckill   r:/seckill

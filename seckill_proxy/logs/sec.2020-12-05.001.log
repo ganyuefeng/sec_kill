@@ -1,0 +1,28 @@
+2020/11/28 14:51:37.739 [D] [init.go:298]  initredis start
+2020/11/28 14:51:37.781 [D] [init.go:298]  initRedis success!!
+2020/11/28 14:51:37.781 [D] [init.go:305]  initEtcd success
+2020/11/28 14:51:37.781 [D] [init.go:312]  key is /ganyuefeng/backend/secskill/product
+2020/11/28 14:51:37.807 [D] [init.go:312]  key is /ganyuefeng/backend/secskill/product
+2020/11/28 14:51:37.807 [D] [init.go:312]  key[0] valud[key:"/ganyuefeng/backend/secskill/product" create_revision:34 mod_revision:34 version:1 value:"[{\"ProductId\":1029,\"StartTime\":1505008800,\"EndTime\":1505012400,\"Status\":0,\"Total\":1000,\"Left\":1000},{\"ProductId\":1027,\"StartTime\":1505008800,\"EndTime\":1505012400,\"Status\":0,\"Total\":2000,\"Left\":1000}]" ]
+2020/11/28 14:51:37.807 [D] [init.go:312]  ganyuefeng info conf is [[{1029 1505008800 1505012400 0 1000 1000} {1027 1505008800 1505012400 0 2000 1000}]]
+2020/11/28 14:51:37.807 [D] [init.go:312]  loadSecConf success!
+2020/11/28 14:51:37.808 [D] [init.go:117]  initredis start
+2020/11/28 14:51:37.808 [D] [init.go:117]  initRedis success!!
+2020/11/28 14:51:37.808 [D] [init.go:318]  init service succ, config:&{{192.168.199.99:6379 64 0 30} { 0 0 0} { 0 0 0} {localhost:2379 5 /ganyuefeng/backend/secskill /ganyuefeng/backend/secskill/product} ./logs/sec.log debug map[1027:0xc00003ef00 1029:0xc00003eed0] {{0 0} 0 0 0 0} tyP87zZKzITuzaUjhmbqhNIDnyg6f2KP [localhost baidu.com/seckill] map[] map[] {50 1 500 10} 0xc000213180 <nil> <nil> <nil> {{0 0} 0 0 0 0} 0 0 0 {0 0}}
+2020/11/28 14:51:37.809 [D] [init.go:33]  read config succ, redis addr:127.0.0.1:6379
+2020/11/28 14:51:37.809 [I] [main.go:17]  init sec success!
+2020/11/28 14:51:37.835 [I] [asm_amd64.s:1357]  http server Running on http://192.168.199.99:9091
+2020/11/28 16:26:44.894 [D] [init.go:298]  initredis start
+2020/11/28 16:26:44.905 [D] [init.go:298]  initRedis success!!
+2020/11/28 16:26:44.905 [D] [init.go:305]  initEtcd success
+2020/11/28 16:26:44.905 [D] [init.go:312]  key is /ganyuefeng/backend/secskill/product
+2020/11/28 16:26:44.919 [D] [init.go:312]  key is /ganyuefeng/backend/secskill/product
+2020/11/28 16:26:44.919 [D] [init.go:312]  key[0] valud[key:"/ganyuefeng/backend/secskill/product" create_revision:34 mod_revision:34 version:1 value:"[{\"ProductId\":1029,\"StartTime\":1505008800,\"EndTime\":1505012400,\"Status\":0,\"Total\":1000,\"Left\":1000},{\"ProductId\":1027,\"StartTime\":1505008800,\"EndTime\":1505012400,\"Status\":0,\"Total\":2000,\"Left\":1000}]" ]
+2020/11/28 16:26:44.919 [D] [init.go:312]  ganyuefeng info conf is [[{1029 1505008800 1505012400 0 1000 1000} {1027 1505008800 1505012400 0 2000 1000}]]
+2020/11/28 16:26:44.919 [D] [init.go:312]  loadSecConf success!
+2020/11/28 16:26:44.919 [D] [init.go:127]  initredis start
+2020/11/28 16:26:44.920 [D] [init.go:127]  initRedis success!!
+2020/11/28 16:26:44.921 [D] [init.go:318]  init service succ, config:&{{192.168.199.99:6379 64 0 30} { 0 0 0} { 0 0 0} {localhost:2379 5 /ganyuefeng/backend/secskill /ganyuefeng/backend/secskill/product} ./logs/sec.log debug map[1027:0xc00003ef00 1029:0xc00003eed0] {{0 0} 0 0 0 0} tyP87zZKzITuzaUjhmbqhNIDnyg6f2KP [localhost baidu.com/seckill] map[] map[] {50 1 500 10} 0xc0002130a0 <nil> <nil> <nil> {{0 0} 0 0 0 0} 0 0 <nil> 0 map[] {0 0}}
+2020/11/28 16:26:44.922 [D] [init.go:33]  read config succ, redis addr:127.0.0.1:6379
+2020/11/28 16:26:44.922 [I] [main.go:17]  init sec success!
+2020/11/28 16:26:44.949 [I] [asm_amd64.s:1357]  http server Running on http://192.168.199.99:9091
